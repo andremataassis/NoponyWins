@@ -1,14 +1,21 @@
 [gd_scene format=3 uid="uid://p6y218jucqe3"]
 
+[ext_resource type="Script" uid="uid://dblstm862mruk" path="res://Scenes/horse_spawner.gd" id="1_52fb6"]
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_g4v7s"]
 size = Vector2(20, 20)
 
 [node name="MainScene" type="Node3D" unique_id=564690262]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1286310594]
-transform = Transform3D(1, 0, 0, 0, 0.90630776, 0.42261827, 0, -0.42261827, 0.90630776, 0, 1.7, 0)
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.7071068, 0, -0.7071068, 0.70710677, 0, 5.451767, -0.31814575)
 
 [node name="GroundMesh" type="MeshInstance3D" parent="." unique_id=408657012]
 mesh = SubResource("PlaneMesh_g4v7s")
 
 [node name="HorseSpawner" type="Node3D" parent="." unique_id=393490325]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.038118124, 0.8267852, -2.5503063)
+script = ExtResource("1_52fb6")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1427909374]
+transform = Transform3D(1, 0, 0, 0, 0.600555, 0.79958344, 0, -0.79958344, 0.600555, 0, 3.365532, 0)
