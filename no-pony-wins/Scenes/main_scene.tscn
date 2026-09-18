@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://p6y218jucqe3"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_g4v7s"]
+size = Vector2(20, 20)
+
+[node name="MainScene" type="Node3D" unique_id=564690262]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1286310594]
+transform = Transform3D(1, 0, 0, 0, 0.90630776, 0.42261827, 0, -0.42261827, 0.90630776, 0, 1.7, 0)
+
+[node name="GroundMesh" type="MeshInstance3D" parent="." unique_id=408657012]
+mesh = SubResource("PlaneMesh_g4v7s")
+
+[node name="HorseSpawner" type="Node3D" parent="." unique_id=393490325]
