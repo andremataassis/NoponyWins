@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bxr034afn4d8e"]
 
-[ext_resource type="Script" uid="uid://dtmx10pvaffn0" path="res://horse_movement.gd" id="1_nsm0p"]
+[ext_resource type="Script" uid="uid://dtmx10pvaffn0" path="res://Scripts/horse_movement.gd" id="1_nsm0p"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jv6wh"]
 albedo_color = Color(0.45183837, 0.24408185, 0.058032535, 1)
