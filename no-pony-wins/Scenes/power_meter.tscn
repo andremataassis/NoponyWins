@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://efwrq0olilm1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tjq3r"]
+bg_color = Color(0.7773849, 0.169395, 0.16452289, 1)
+
+[node name="PowerMeter" type="Node2D" unique_id=994505206]
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1575397196]
+offset_left = 37.0
+offset_top = 591.0
+offset_right = 183.0
+offset_bottom = 618.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_tjq3r")
+show_percentage = false
