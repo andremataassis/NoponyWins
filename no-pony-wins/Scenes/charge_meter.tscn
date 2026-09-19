@@ -3,7 +3,7 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tjq3r"]
 bg_color = Color(0.7773849, 0.169395, 0.16452289, 1)
 
-[node name="PowerMeter" type="Node2D" unique_id=994505206]
+[node name="ChargeMeter" type="Node2D" unique_id=994505206]
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=1575397196]
 offset_left = 37.0
