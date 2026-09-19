@@ -20,43 +20,44 @@ func _init(pid: int, did: int, h: Node, char_meter: Node, crosshair: Node):
 	device_id = did
 	color = COLORS[pid - 1]
 	horse = h
-	charge_meter_ref = char_meter
+	charge_meter_ref = char_meter.get_child(0)
 	crosshair_ref = crosshair
 
-func _pick_horse(h: Node):
+func _set_horse(h: Node):
 	horse = h
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
 
-func _refill_meter(delta: float) -> float:
+#call this in _process
+func refill_meter(delta: float):
 	charge += 20 * delta
 	charge = min(charge, MAX_CHARGE)
 	charge_meter_ref.value = charge
-	return charge
 
-func _use_power(delta: float, event: InputEvent):
-	var meter = _refill_meter(delta)
-		
-	if event.is_action_just_pressed("bomb") && meter == 100.0:
+func handle_input(event: InputEvent):
+	select_power(event)
+
+func select_power(event: InputEvent):
+	if event.is_action_pressed("bomb") && charge == 100.0:
 		print ("bombed! - Player %d" % [player_id])
 		crosshair_ref.crosshair_enable("bomb") # FIX get_child(0) param to playerNum
 		charge = 0.0
 	
-	if event.is_action_just_pressed("jetpack") && meter == 100.0:
+	if event.is_action_pressed("jetpack") && charge == 100.0:
 		print("Nyoooooom- Player %d" % [player_id])
 		crosshair_ref.crosshair_enable("jetpack")
 		charge = 0.0
 	
-	if event.is_action_just_pressed("portal") && meter == 100.0:
+	if event.is_action_pressed("portal") && charge == 100.0:
 		print("The cake is a lie- Player %d" % [player_id])
 		crosshair_ref.crosshair_enable("portal")
 		charge = 0.0
 	
-	if event.is_action_just_pressed("airhorn") && meter == 1.0:
+	if event.is_action_pressed("airhorn") && charge == 1.0:
 		print("FWOOOOOOOOO- Player %d" % [player_id])
-		meter = 0.0
+		charge = 0.0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
