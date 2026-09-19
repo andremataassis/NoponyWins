@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://dic7cursrxkdk"]
 
-[ext_resource type="AudioStream" uid="uid://7ep5ojxs7r2v" path="res://Assets/Sounds/SFX/sfx_gallop_horse.wav" id="1_jqr8b"]
+[ext_resource type="AudioStream" uid="uid://iuuy88rlqcxk" path="res://Assets/Sounds/SFX/sfx_gallop_horse.wav" id="1_jqr8b"]
 [ext_resource type="Script" uid="uid://b5exmnjy8k4iy" path="res://Scenes/HorseSFX/horse_sfx.gd" id="1_mrrop"]
 [ext_resource type="Script" uid="uid://ctdmqnqw0vc5j" path="res://Scenes/HorseSFX/gallop_sfx.gd" id="2_87orh"]
+[ext_resource type="AudioStream" uid="uid://bcnn2qs2h4y1e" path="res://Assets/Sounds/SFX/sfx_gallop_horse2.wav" id="3_87orh"]
+[ext_resource type="AudioStream" uid="uid://dkvqk04v8fxvf" path="res://Assets/Sounds/SFX/sfx_gallop_horse3.wav" id="5_joiwp"]
 
 [node name="HorseSFX" type="Node3D" unique_id=1871822883]
 script = ExtResource("1_mrrop")
@@ -13,3 +15,10 @@ script = ExtResource("2_87orh")
 [node name="SFX_Gallop_1" type="AudioStreamPlayer3D" parent="GallopSFX" unique_id=1692672567]
 stream = ExtResource("1_jqr8b")
 bus = &"SFX"
+
+[node name="SFX_Gallop_2" type="AudioStreamPlayer3D" parent="GallopSFX" unique_id=1846894649]
+stream = ExtResource("3_87orh")
+bus = &"SFX"
+
+[node name="SFX_Gallop_3" type="AudioStreamPlayer3D" parent="GallopSFX" unique_id=899716884]
+stream = ExtResource("5_joiwp")
