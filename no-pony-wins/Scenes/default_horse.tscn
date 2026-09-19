@@ -1,16 +1,11 @@
 [gd_scene format=3 uid="uid://bxr034afn4d8e"]
 
 [ext_resource type="Script" uid="uid://dtmx10pvaffn0" path="res://Scripts/horse_movement.gd" id="1_nsm0p"]
+[ext_resource type="PackedScene" uid="uid://cgslwst4i2gf3" path="res://Assets/Models/baseplate.gltf" id="2_rprfm"]
+[ext_resource type="Texture2D" uid="uid://b1yfn5aolkamg" path="res://Assets/Sprites/Horse.png" id="3_rprfm"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jv6wh"]
-albedo_color = Color(0.45183837, 0.24408185, 0.058032535, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_g4v7s"]
-material = SubResource("StandardMaterial3D_jv6wh")
-size = Vector3(0.8, 0.5, 0.5)
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_28pbt"]
-points = PackedVector3Array(0.4, 0.25, 0.25, 0.4, 0.25, -0.25, -0.4, 0.25, 0.25, 0.4, -0.25, 0.25, 0.4, -0.25, -0.25, -0.4, 0.25, -0.25, -0.4, -0.25, 0.25, -0.4, -0.25, -0.25)
+[sub_resource type="SphereShape3D" id="SphereShape3D_32gta"]
+radius = 0.41355848
 
 [node name="PathFollow3D" type="PathFollow3D" unique_id=2064781809]
 script = ExtResource("1_nsm0p")
@@ -19,8 +14,14 @@ script = ExtResource("1_nsm0p")
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 freeze = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Horse" unique_id=812554162]
-mesh = SubResource("BoxMesh_g4v7s")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Horse" unique_id=1394241195]
-shape = SubResource("ConvexPolygonShape3D_28pbt")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2790074, 0)
+shape = SubResource("SphereShape3D_32gta")
+
+[node name="blockbench_export" parent="Horse" unique_id=1736237499 instance=ExtResource("2_rprfm")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="Horse" unique_id=1701294267]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0.4574952, 0)
+flip_h = true
+texture = ExtResource("3_rprfm")
