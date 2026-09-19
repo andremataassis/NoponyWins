@@ -13,14 +13,14 @@ func _physics_process(delta: float) -> void:
 	path_follow_3d.progress_ratio += move_speed * delta
 
 # these guys are called from the crosshair script (to be added)
-func _bomb() -> void:
+func bomb() -> void:
 	move_speed = 0.001
 
-func _end_bomb() -> void:
+func end_bomb() -> void:
 	move_speed = 0.1
 
-func _jetpack() -> void:
+func jetpack() -> void:
 	move_speed = 1.0
 
-func _end_jetpack() -> void:
+func end_jetpack() -> void:
 	move_speed = .01
