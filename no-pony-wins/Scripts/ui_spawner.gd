@@ -2,7 +2,7 @@ extends Node2D
 class_name UI_SPAWNER
 
 const CROSSHAIR = preload("uid://ctxwinfr06la4")
-const CHARGE_METER = preload("uid://efwrq0olilm1")
+const CHARGE_METER = preload("res://Scenes/charge_meter.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
