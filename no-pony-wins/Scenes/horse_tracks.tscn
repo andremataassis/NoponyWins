@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://ccei4waql30d3"]
+
+[sub_resource type="Curve3D" id="Curve3D_5a5oa"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, -2, 0, 0, 0, 0, 0, 0, 3, 0, -2, 0, 0, -2, 0, 0, 2, 5, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 2, 0, 0, 0, 0, 0, 0, -3, 0, 2, 0, 0, 2, 0, 0, -2, -5, 0, 0, 0, 0, 0, 0, 0, 0, -3, 0, -2),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 7
+
+[sub_resource type="Curve3D" id="Curve3D_nt2dy"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, -2.5, 0, 0, 0, 0, 0, 0, 3, 0, -2.5, 0, 0, -2.5, 0.009, 0, 2.5, 5.5, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 2.5, 0, 0, 0, 0, 0, 0, -3, 0, 2.5, 0, 0, 2.5, 0, 0, -2.5, -5.5, 0, 0, 0, 0, 0, 0, 0, 0, -3, 0, -2.5),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 7
+
+[sub_resource type="Curve3D" id="Curve3D_danqs"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, -3, 0, 0, 0, 0, 0, 0, 3, 0, -3, 0, 0, -3, 0.009, 0, 3, 6, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 3, 0, 0, 0, 0, 0, 0, -3, 0, 3, 0, 0, 3, 0, 0, -3, -6, 0, 0, 0, 0, 0, 0, 0, 0, -3, 0, -3),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 7
+
+[sub_resource type="Curve3D" id="Curve3D_b3ap2"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, -3.5, 0, 0, 0, 0, 0, 0, 3, 0, -3.5, 0, 0, -3.5, 0.009, 0, 3.5, 6.5, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 3.5, 0, 0, 0, 0, 0, 0, -3, 0, 3.5, 0, 0, 3.5, 0, 0, -3.5, -6.5, 0, 0, 0, 0, 0, 0, 0, 0, -3, 0, -3.5),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 7
+
+[sub_resource type="Curve3D" id="Curve3D_u30i6"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, -4, 0, 0, 0, 0, 0, 0, 3, 0, -4, 0, 0, -4, 0.009, 0, 4, 7, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 4, 0, 0, 0, 0, 0, 0, -3, 0, 4, 0, 0, 4, 0, 0, -4, -7, 0, 0, 0, 0, 0, 0, 0, 0, -3, 0, -4),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 7
+
+[sub_resource type="Curve3D" id="Curve3D_3gsw2"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, -4.5, 0, 0, 0, 0, 0, 0, 3, 0, -4.5, 0, 0, -4.5, 0.009, 0, 4.5, 7.5, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 4.5, 0, 0, 0, 0, 0, 0, -3, 0, 4.5, 0, 0, 4.5, 0, 0, -4.5, -7.5, 0, 0, 0, 0, 0, 0, 0, 0, -3, 0, -4.5),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 7
+
+[sub_resource type="Curve3D" id="Curve3D_vvbe2"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, -5, 0, 0, 0, 0, 0, 0, 3, 0, -5, 0, 0, -5, 0.009, 0, 5, 8, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 5, 0, 0, 0, 0, 0, 0, -3, 0, 5, 0, 0, 5, 0, 0, -5, -8, 0, 0, 0, 0, 0, 0, 0, 0, -3, 0, -5),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 7
+
+[sub_resource type="Curve3D" id="Curve3D_ge322"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, -5.5, 0, 0, 0, 0, 0, 0, 3, 0, -5.5, 0, 0, -5.5, 0.009, 0, 5.5, 8.5, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 5.5, 0, 0, 0, 0, 0, 0, -3, 0, 5.5, 0, 0, 5.5, 0, 0, -5.5, -8.5, 0, 0, 0, 0, 0, 0, 0, 0, -3, 0, -5.5),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 7
+
+[node name="HorseTracks" type="Node3D" unique_id=1602493002]
+
+[node name="Path3D_Lane1" type="Path3D" parent="." unique_id=766795594]
+curve = SubResource("Curve3D_5a5oa")
+
+[node name="Path3D_Lane2" type="Path3D" parent="." unique_id=923706494]
+curve = SubResource("Curve3D_nt2dy")
+
+[node name="Path3D_Lane3" type="Path3D" parent="." unique_id=745210885]
+curve = SubResource("Curve3D_danqs")
+
+[node name="Path3D_Lane4" type="Path3D" parent="." unique_id=1816951718]
+curve = SubResource("Curve3D_b3ap2")
+
+[node name="Path3D_Lane5" type="Path3D" parent="." unique_id=743449407]
+curve = SubResource("Curve3D_u30i6")
+
+[node name="Path3D_Lane6" type="Path3D" parent="." unique_id=1547001052]
+curve = SubResource("Curve3D_3gsw2")
+
+[node name="Path3D_Lane7" type="Path3D" parent="." unique_id=248461632]
+curve = SubResource("Curve3D_vvbe2")
+
+[node name="Path3D_Lane8" type="Path3D" parent="." unique_id=649438885]
+curve = SubResource("Curve3D_ge322")

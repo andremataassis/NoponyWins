@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://p6y218jucqe3"]
 
 [ext_resource type="Script" uid="uid://dblstm862mruk" path="res://Scenes/horse_spawner.gd" id="1_52fb6"]
+[ext_resource type="PackedScene" uid="uid://ccei4waql30d3" path="res://Scenes/horse_tracks.tscn" id="2_6l7je"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_g4v7s"]
 size = Vector2(20, 20)
@@ -13,9 +14,12 @@ transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.7071068, 0, -0.7071068, 0.7071
 [node name="GroundMesh" type="MeshInstance3D" parent="." unique_id=408657012]
 mesh = SubResource("PlaneMesh_g4v7s")
 
-[node name="HorseSpawner" type="Node3D" parent="." unique_id=393490325]
+[node name="HorseSpawner" type="Node3D" parent="." unique_id=393490325 node_paths=PackedStringArray("tracks")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.038118124, 0.8267852, -2.5503063)
 script = ExtResource("1_52fb6")
+tracks = NodePath("../HorseTracks")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1427909374]
 transform = Transform3D(1, 0, 0, 0, 0.600555, 0.79958344, 0, -0.79958344, 0.600555, 0, 3.365532, 0)
+
+[node name="HorseTracks" parent="." unique_id=1602493002 instance=ExtResource("2_6l7je")]
