@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dtmx10pvaffn0" path="res://Scripts/horse_movement.gd" id="1_nsm0p"]
 [ext_resource type="PackedScene" uid="uid://cgslwst4i2gf3" path="res://Assets/Models/baseplate.gltf" id="2_rprfm"]
-[ext_resource type="Texture2D" uid="uid://b1yfn5aolkamg" path="res://Assets/Sprites/Deven_Horse.png" id="3_rprfm"]
+[ext_resource type="Texture2D" uid="uid://b1fruax7mmhdu" path="res://Assets/Sprites/Default_Horse.png" id="3_51vgs"]
 [ext_resource type="PackedScene" uid="uid://dic7cursrxkdk" path="res://Scenes/HorseSFX/HorseSFX.tscn" id="4_51vgs"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_32gta"]
@@ -23,8 +23,8 @@ shape = SubResource("SphereShape3D_32gta")
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 
 [node name="Sprite3D" type="Sprite3D" parent="Horse" unique_id=1701294267]
-transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0.4574952, 0)
+transform = Transform3D(0.17, 0, 0, 0, 0.17, 0, 0, 0, 0.17, 0, 0.53999543, 0)
 flip_h = true
-texture = ExtResource("3_rprfm")
+texture = ExtResource("3_51vgs")
 
 [node name="HorseSFX" parent="Horse" unique_id=1871822883 instance=ExtResource("4_51vgs")]

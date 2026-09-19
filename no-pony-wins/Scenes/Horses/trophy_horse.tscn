@@ -21,7 +21,7 @@ shape = SubResource("SphereShape3D_c5pkk")
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 
 [node name="Sprite3D" type="Sprite3D" parent="Horse" unique_id=78510537]
-transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, 0, 0.6747918, 0)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.61846733, 0)
 flip_h = true
 texture = ExtResource("3_5by43")
 
