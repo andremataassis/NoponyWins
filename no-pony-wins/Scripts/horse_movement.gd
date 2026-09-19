@@ -14,13 +14,10 @@ func _physics_process(delta: float) -> void:
 
 # these guys are called from the crosshair script (to be added)
 func bomb() -> void:
-	move_speed = 0.001
-
-func end_bomb() -> void:
-	move_speed = 0.1
+	move_speed = 0.01
 
 func jetpack() -> void:
 	move_speed = 1.0
 
-func end_jetpack() -> void:
-	move_speed = .01
+func reset_speed() -> void:
+	move_speed = 0.1
