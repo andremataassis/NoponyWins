@@ -18,11 +18,11 @@ func crosshair_enable(input: String) -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	# crosshair movement
-	var time = Time.get_ticks_msec() / 10.0
+	var time = Time.get_ticks_msec() / 100.0
 	position.y = start_y + sin(time) * 150 + 50
 	
 	# map position.y to horse number
-	var target = (position.y - 150) * 7 / 300 - 1
+	var target = 8 - ((position.y - 150) * 7 / 300)
 	
 	# attack!!
 	if power != "":
