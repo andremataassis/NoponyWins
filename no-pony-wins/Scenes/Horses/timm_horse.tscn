@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://dys2vux5kc3b3"]
+
+[ext_resource type="Script" uid="uid://dtmx10pvaffn0" path="res://Scripts/horse_movement.gd" id="1_m2ob5"]
+[ext_resource type="PackedScene" uid="uid://cgslwst4i2gf3" path="res://Assets/Models/baseplate.gltf" id="2_1hru7"]
+[ext_resource type="ArrayMesh" uid="uid://cvto6mn7f6guq" path="res://Assets/Models/TimmHorse.obj" id="3_m2ob5"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_32gta"]
+radius = 0.41355848
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1hru7"]
+albedo_color = Color(0.35, 0.23969167, 0.13649999, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_tw1tv"]
+radius = 0.4
+height = 0.6
+
+[sub_resource type="SphereMesh" id="SphereMesh_5goe2"]
+radius = 0.2
+height = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wuow3"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="PathFollow3D" type="PathFollow3D" unique_id=2064781809]
+script = ExtResource("1_m2ob5")
+
+[node name="Horse" type="RigidBody3D" parent="." unique_id=1005567097]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Horse" unique_id=1394241195]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2790074, 0)
+shape = SubResource("SphereShape3D_32gta")
+
+[node name="blockbench_export" parent="Horse" unique_id=1736237499 instance=ExtResource("2_1hru7")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1304423733]
+transform = Transform3D(-0.06, 0, -5.2453664e-09, 0, 0.06, 0, 5.2453664e-09, 0, -0.06, 0, 0.68764096, -0.53882164)
+mesh = ExtResource("3_m2ob5")
+surface_material_override/0 = SubResource("StandardMaterial3D_1hru7")
+
+[node name="Eye" type="MeshInstance3D" parent="MeshInstance3D" unique_id=1115459986]
+transform = Transform3D(0.6343217, 0.067006655, 1.0750098, 0.25492203, 1.2027941, -0.22539125, -1.0464945, 0.3336114, 0.5967015, 0.97501034, 1.8321629, -0.28732204)
+mesh = SubResource("SphereMesh_tw1tv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D/Eye" unique_id=82650794]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.23317909)
+mesh = SubResource("SphereMesh_5goe2")
+surface_material_override/0 = SubResource("StandardMaterial3D_wuow3")
+
+[node name="Eye2" type="MeshInstance3D" parent="MeshInstance3D" unique_id=1962607385]
+transform = Transform3D(0.5517363, -0.31904128, -1.0753138, 0.25562, 1.2025976, -0.22564894, 1.0921289, -0.1202984, 0.5960561, -0.975, 1.832, -0.287)
+mesh = SubResource("SphereMesh_tw1tv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D/Eye2" unique_id=1850045697]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.23317909)
+mesh = SubResource("SphereMesh_5goe2")
+surface_material_override/0 = SubResource("StandardMaterial3D_wuow3")
