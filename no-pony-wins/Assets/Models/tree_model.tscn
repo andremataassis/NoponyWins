@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://bujcahqkqw4eb"]
+
+[ext_resource type="PackedScene" uid="uid://dkghxpiwtv0f3" path="res://Assets/Models/Tree.gltf" id="1_fft2q"]
+[ext_resource type="Script" uid="uid://dpk8f3lu610gc" path="res://Scripts/billboard.gd" id="2_ch2xd"]
+
+[node name="blockbench_export" unique_id=557707245 instance=ExtResource("1_fft2q")]
+
+[node name="Leaves" parent="." index="1" unique_id=2036881895]
+script = ExtResource("2_ch2xd")
+apply_to_children = true
+
+[node name="billboard" parent="Leaves" index="0" unique_id=1103523376]
+transform = Transform3D(1.0000001, 1.8655568e-09, 0, -1.8655573e-09, 0.99999994, 0, 0, 0, 1.0000001, 0.3125, 1.3125, -0.5625)
+
+[node name="billboard2" parent="Leaves" index="1" unique_id=975316433]
+transform = Transform3D(0.99999994, 9.316373e-10, 0, -9.316372e-10, 1, 0, 0, 0, 1, 0.375, 1.5625, -0.625)
+
+[node name="billboard3" parent="Leaves" index="2" unique_id=1756132267]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0.0625, 1.3125, -0.375)
+
+[node name="billboard4" parent="Leaves" index="3" unique_id=1123487870]
+transform = Transform3D(1.0000001, 4.656901e-10, 0, -4.656902e-10, 0.99999994, 0, 0, 0, 1, 0.3125, 1.875, -0.4375)
+
+[node name="billboard5" parent="Leaves" index="4" unique_id=1728250861]
+transform = Transform3D(1, 9.314945e-10, 0, -9.314945e-10, 1, 0, 0, 0, 1, -0.125, 1.625, -0.25)
+
+[node name="billboard6" parent="Leaves" index="5" unique_id=1587839455]
+transform = Transform3D(0.9999998, 1.8649624e-09, 0, -1.864962e-09, 1, 0, 0, 0, 0.9999998, -0.3125, 1.375, 0.125)
+
+[node name="billboard7" parent="Leaves" index="6" unique_id=2086387485]
+transform = Transform3D(1, -9.314796e-10, 0, 9.314796e-10, 1, 0, 0, 0, 0.99999994, 0.125, 1.9375, 0.125)
+
+[node name="billboard8" parent="Leaves" index="7" unique_id=1490592128]
+transform = Transform3D(1, -9.318889e-10, 0, 9.318889e-10, 1, 0, 0, 0, 1, -0.25, 2.0625, -0.125)
+
+[node name="billboard9" parent="Leaves" index="8" unique_id=27286813]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0.1875, 1.875, 0.875)
+
+[node name="billboard10" parent="Leaves" index="9" unique_id=944823075]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.125, 1.75, 0.4375)
+
+[node name="billboard11" parent="Leaves" index="10" unique_id=946273343]
+transform = Transform3D(1, -9.318363e-10, 0, 9.318363e-10, 1, 0, 0, 0, 1, -0.125, 1.5, 0.4375)
+
+[node name="billboard12" parent="Leaves" index="11" unique_id=2073448130]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.0625, 1.875, 0.6875)
+
+[node name="billboard13" parent="Leaves" index="12" unique_id=1398367849]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1875, 1.125, -0.1875)
+
+[node name="billboard14" parent="Leaves" index="13" unique_id=1953106763]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1875, 1.375, 0.125)
+
+[node name="billboard15" parent="Leaves" index="14" unique_id=195348779]
+transform = Transform3D(1, 1.866321e-09, 0, -1.866321e-09, 1, 0, 0, 0, 1, 0.1875, 2.3125, -0.125)
+
+[node name="billboard16" parent="Leaves" index="15" unique_id=419025211]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.125, 2.25, 0.25)
+
+[node name="billboard17" parent="Leaves" index="16" unique_id=2131575933]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 1.9375, -0.5625)
+
+[node name="billboard18" parent="Leaves" index="17" unique_id=1801446981]
+transform = Transform3D(1, -1.867036e-09, 0, 1.867036e-09, 1, 0, 0, 0, 1, -0.5625, 2.3125, -0.25)
+
+[node name="billboard19" parent="Leaves" index="18" unique_id=1523076510]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.99999994, 0, 0, 0, 0.9999999, 0.5, 1.75, 0.75)

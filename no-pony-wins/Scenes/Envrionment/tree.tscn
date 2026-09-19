@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cfujj61hrcklc"]
+
+[ext_resource type="PackedScene" uid="uid://bujcahqkqw4eb" path="res://Assets/Models/tree_model.tscn" id="1_1hpiy"]
+
+[node name="tree" type="Node3D" unique_id=1451147824]
+
+[node name="blockbench_export" parent="." unique_id=557707245 instance=ExtResource("1_1hpiy")]

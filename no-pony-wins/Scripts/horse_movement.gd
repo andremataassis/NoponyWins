@@ -18,7 +18,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	path_follow_3d.progress_ratio += move_speed * delta
+	path_follow_3d.progress_ratio += (move_speed * (.5 + randf())) * delta
 	if horseGallopTimer > 0:
 		horseGallopTimer -= delta
 	else:
