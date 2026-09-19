@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dtmx10pvaffn0" path="res://Scripts/horse_movement.gd" id="1_nsm0p"]
 [ext_resource type="PackedScene" uid="uid://cgslwst4i2gf3" path="res://Assets/Models/baseplate.gltf" id="2_rprfm"]
-[ext_resource type="Texture2D" uid="uid://b1yfn5aolkamg" path="res://Assets/Sprites/Horse.png" id="3_rprfm"]
+[ext_resource type="Texture2D" uid="uid://b1yfn5aolkamg" path="res://Assets/Sprites/Deven_Horse.png" id="3_rprfm"]
 [ext_resource type="PackedScene" uid="uid://dic7cursrxkdk" path="res://Scenes/HorseSFX/HorseSFX.tscn" id="4_51vgs"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_32gta"]
