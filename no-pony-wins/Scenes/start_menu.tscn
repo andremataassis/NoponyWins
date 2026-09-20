@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bh25gyoc63jxe"]
 
 [ext_resource type="Script" uid="uid://8o6rpr0lxuvm" path="res://Scripts/scene_relay.gd" id="1_juhg0"]
+[ext_resource type="AudioStream" uid="uid://b00i0p4qqqict" path="res://Assets/Sounds/Music/No Pony Wins Main Menu.wav" id="2_jgtwh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kqfgo"]
 font_size = 32
@@ -64,5 +65,9 @@ text = "NoPony Wins"
 label_settings = SubResource("LabelSettings_32gta")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="MainMenuTheme" type="AudioStreamPlayer" parent="." unique_id=105373302]
+stream = ExtResource("2_jgtwh")
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="to_game"]
