@@ -5,6 +5,9 @@ var lap : int = 0
 @onready var horseSFX = $Horse/HorseSFX
 @onready var rng = RandomNumberGenerator.new()
 
+const JETPACK_TRAIL = preload("uid://do0ihjyx326ps")
+
+
 @export var move_speed = 0.1
 @export var horseGallopCooldown : float = 0.4
 @export var horse_name = "default"
@@ -81,7 +84,10 @@ func bomb() -> void:
 	move_speed = 0.01
 
 func jetpack() -> void:
-	move_speed = 1.0
+	move_speed = .3
+	var jetpack_trail = JETPACK_TRAIL.instantiate()
+	add_child(jetpack_trail)
+	jetpack_trail.position.y = .5
 
 func reset_speed() -> void:
 	move_speed = 0.1
