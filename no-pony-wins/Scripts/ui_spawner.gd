@@ -5,6 +5,7 @@ const CROSSHAIR = preload("uid://ctxwinfr06la4")
 const CHARGE_METER = preload("res://Scenes/UI/charge_meter.tscn")
 const HORSE_SELECTION = preload("uid://bni63ghyc7tpx")
 const TIMM_HORSE_SS = preload("uid://7p0c6axvawmg")
+const WIN_SCREEN = preload("uid://c3i40q8kd5ct4")
 var horse_sel_instance = null
 var canvas_size: Vector2
 var ready_countdown = false
@@ -43,6 +44,15 @@ func update_horse_selection_ui(pid: int):
 func delete_horse_selection_ui():
 	if horse_sel_instance != null:
 		horse_sel_instance.queue_free()
+
+func spawn_win_screen(win_players: Array[String], horse: Horse):
+	var win_screen_ref = WIN_SCREEN.instantiate()
+	add_child(win_screen_ref)
+	var players_string = "\n".join(PackedStringArray(win_players))
+	if win_players.size() == 0:
+		win_screen_ref.get_child(0).text = "'%s' has won the race!\n\nNopony Wins!" % [horse.horse_name]
+	else:
+		win_screen_ref.get_child(0).text = "'%s' has won the race!\nThese players(s) bet on the right horse:\n %s" % [horse.horse_name, players_string]
 
 func place_charge_meter(player_id : int, color: Color):
 	var charge_instance = CHARGE_METER.instantiate()

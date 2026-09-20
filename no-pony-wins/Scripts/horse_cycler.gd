@@ -24,6 +24,7 @@ var _spawned_horses : Array[Node3D] = []
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	spawn_horse_cycle()
+	pass
 
 # spawns horses and calls itself after a pause
 func spawn_horse_cycle():
