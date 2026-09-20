@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bob0lrymw50b3"]
+
+[ext_resource type="Script" uid="uid://dtmx10pvaffn0" path="res://Scripts/horse_movement.gd" id="1_ia55t"]
+[ext_resource type="PackedScene" uid="uid://cgslwst4i2gf3" path="res://Assets/Models/baseplate.gltf" id="2_iej7r"]
+[ext_resource type="Texture2D" uid="uid://cqlk6yynhnsci" path="res://Assets/Sprites/andre_horse.png" id="3_fc3mt"]
+[ext_resource type="PackedScene" uid="uid://dic7cursrxkdk" path="res://Scenes/HorseSFX/HorseSFX.tscn" id="4_7exsf"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_c5pkk"]
+
+[node name="#horse" type="PathFollow3D" unique_id=614570271]
+script = ExtResource("1_ia55t")
+
+[node name="Horse" type="RigidBody3D" parent="." unique_id=772257037]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Horse" unique_id=1766802171]
+shape = SubResource("SphereShape3D_c5pkk")
+
+[node name="blockbench_export" parent="Horse" unique_id=2071927298 instance=ExtResource("2_iej7r")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="Horse" unique_id=275337624]
+transform = Transform3D(0.27, 0, 0, 0, 0.27, 0, 0, 0, 0.27, 0, 0.48170984, 0)
+flip_h = true
+texture = ExtResource("3_fc3mt")
+
+[node name="HorseSFX" parent="Horse" unique_id=1871822883 instance=ExtResource("4_7exsf")]

@@ -3,7 +3,7 @@ class_name Crosshair
 
 @onready var crosshair: Node2D = $"."
 @onready var horse_tracks: Node3D = $"../../../HorseTracks"
-
+@onready var powerSFX = $PowerSFX
 var start_y: float
 var enabled_time: float
 
@@ -37,6 +37,8 @@ func attack(power : Player.Powers) -> void:
 
 	match (power):
 		Player.Powers.BOMB:
+			# play bomb sound
+			powerSFX.play("BOMB")
 			# get horses in blast
 			var targets = [-1, horse, -1]
 			if horse - 1 >= 0:

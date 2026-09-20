@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bk365cu586f5g" path="res://Scripts/crosshair.gd" id="1_otoyv"]
 [ext_resource type="Texture2D" uid="uid://dxpq0yo6i83pr" path="res://Assets/Sprites/Crosshair.png" id="2_otoyv"]
+[ext_resource type="PackedScene" uid="uid://bmfrwj021grtl" path="res://Scenes/PowerSFX/PowerSFX.tscn" id="3_aia6a"]
 
 [node name="Crosshair" type="Node2D" unique_id=961195152]
 position = Vector2(680, 300)
@@ -10,3 +11,5 @@ script = ExtResource("1_otoyv")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=882457772]
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_otoyv")
+
+[node name="PowerSFX" parent="." unique_id=1032374660 instance=ExtResource("3_aia6a")]
