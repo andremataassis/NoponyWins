@@ -12,6 +12,8 @@ var start_y: float = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	get_child(0).texture = dude_list[randi_range(0, dude_list.size() - 1)]
+	var size = randf_range(0.8, 1.5)
+	get_child(0).scale = Vector3(size, 1, size)
 	start_y = get_child(0).offset.y
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
