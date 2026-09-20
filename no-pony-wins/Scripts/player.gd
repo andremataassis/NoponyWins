@@ -25,8 +25,9 @@ func _init(pid: int, did: int, h: Node, char_meter: Node, crosshair: Node):
 	charge_meter_ref = char_meter.get_child(0)
 	crosshair_ref = crosshair
 
-func _set_horse(h: Node):
+func set_horse(h: Horse):
 	horse = h
+	print("Player %d picked horse %s" % [player_id, h.horse_name])
 
 func use_current_power():
 	crosshair_ref.attack(selected_power)

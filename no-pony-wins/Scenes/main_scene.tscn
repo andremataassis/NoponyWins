@@ -1,23 +1,23 @@
 [gd_scene format=3 uid="uid://p6y218jucqe3"]
 
-[ext_resource type="Script" uid="uid://dblstm862mruk" path="res://Scripts/horse_spawner.gd" id="1_52fb6"]
+[ext_resource type="Script" uid="uid://dblstm862mruk" path="res://Scripts/horse_manager.gd" id="1_52fb6"]
 [ext_resource type="Script" uid="uid://fbp8bsrv5p8r" path="res://Scripts/camera_movement.gd" id="1_jv6wh"]
 [ext_resource type="Script" uid="uid://di21cswbi35y7" path="res://Scripts/race_handler.gd" id="1_maf8m"]
 [ext_resource type="PackedScene" uid="uid://ccei4waql30d3" path="res://Scenes/horse_tracks.tscn" id="2_6l7je"]
 [ext_resource type="ArrayMesh" uid="uid://8ba0ry3jjnb3" path="res://Assets/Models/Track.obj" id="3_huasi"]
 [ext_resource type="Texture2D" uid="uid://bdaaetyh55r5j" path="res://Assets/Models/Track_Untitled.png" id="4_mai8y"]
-[ext_resource type="PackedScene" uid="uid://dtge7gr2tsuum" path="res://Scenes/UI.tscn" id="4_x6ack"]
-[ext_resource type="Script" uid="uid://chqw76adblo3t" path="res://Scripts/ui_spawner.gd" id="6_6ev3c"]
-[ext_resource type="Texture2D" uid="uid://dh28kaofvo7iv" path="res://Assets/Sprites/toolWheel.PNG" id="7_maf8m"]
+[ext_resource type="PackedScene" uid="uid://dtge7gr2tsuum" path="res://Scenes/UI/UI.tscn" id="4_x6ack"]
+[ext_resource type="Texture2D" uid="uid://dh28kaofvo7iv" path="res://Assets/Sprites/ui_elements/toolWheel.PNG" id="7_maf8m"]
 [ext_resource type="PackedScene" uid="uid://cfujj61hrcklc" path="res://Scenes/Envrionment/tree.tscn" id="8_huasi"]
 [ext_resource type="AudioStream" uid="uid://dqb0jvg31wv4w" path="res://Assets/Sounds/Music/No Pony Wins.wav" id="11_76v2p"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m1efj"]
 albedo_texture = ExtResource("4_mai8y")
 
-[node name="MainScene" type="Node3D" unique_id=564690262 node_paths=PackedStringArray("ui_spawner")]
+[node name="RaceHandler" type="Node3D" unique_id=564690262 node_paths=PackedStringArray("ui_spawner", "horse_manager")]
 script = ExtResource("1_maf8m")
 ui_spawner = NodePath("CanvasLayer/Ui")
+horse_manager = NodePath("HorseManager")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1286310594]
 transform = Transform3D(1, 0, 0, 0, 0.49999994, 0.8660254, 0, -0.8660254, 0.49999994, 0, 2.5, 0)
@@ -28,7 +28,7 @@ transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
 mesh = ExtResource("3_huasi")
 surface_material_override/0 = SubResource("StandardMaterial3D_m1efj")
 
-[node name="HorseSpawner" type="Node3D" parent="." unique_id=393490325 node_paths=PackedStringArray("tracks")]
+[node name="HorseManager" type="Node3D" parent="." unique_id=393490325 node_paths=PackedStringArray("tracks")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.038118124, 0.8267852, -2.5503063)
 script = ExtResource("1_52fb6")
 tracks = NodePath("../HorseTracks")
@@ -41,7 +41,21 @@ transform = Transform3D(1, 0, 0, 0, 0.600555, 0.79958344, 0, -0.79958344, 0.6005
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=633935078]
 
 [node name="Ui" parent="CanvasLayer" unique_id=306207390 instance=ExtResource("4_x6ack")]
-script = ExtResource("6_6ev3c")
+
+[node name="Label" type="Label" parent="CanvasLayer/Ui" unique_id=1012726521]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -403.0
+offset_top = -23.0
+offset_right = 403.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 21
+text = "Press any button to join the game, hit 'A' on the keyboard or UP D-PAD on controller when everyone's in!"
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1463849988]
 anchors_preset = 1

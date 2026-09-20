@@ -1,0 +1,243 @@
+[gd_scene format=3 uid="uid://bni63ghyc7tpx"]
+
+[ext_resource type="Texture2D" uid="uid://b4fm2xc1mr5ie" path="res://Assets/Sprites/ui_elements/right_button.png" id="1_mwts4"]
+[ext_resource type="Texture2D" uid="uid://ngiv4anrw7mc" path="res://Assets/Sprites/ui_elements/down_button.png" id="2_wsio1"]
+[ext_resource type="Texture2D" uid="uid://bxl4ish8b4guy" path="res://Assets/Sprites/ui_elements/left_button.png" id="3_ulctq"]
+[ext_resource type="Texture2D" uid="uid://bb7xsi07wubis" path="res://Assets/Sprites/ui_elements/up_button.png" id="4_0lsd7"]
+[ext_resource type="Texture2D" uid="uid://g23xdi1n5l6e" path="res://Assets/Sprites/ui_elements/up_dpad.png" id="5_shm2x"]
+[ext_resource type="Texture2D" uid="uid://bs163sxt48om3" path="res://Assets/Sprites/ui_elements/right_dpad.png" id="6_d6xx3"]
+[ext_resource type="Texture2D" uid="uid://dhihbabw7tns3" path="res://Assets/Sprites/ui_elements/down_dpad.png" id="7_5cqsw"]
+[ext_resource type="Texture2D" uid="uid://bp0b2r1rnua7f" path="res://Assets/Sprites/ui_elements/left_dpad.png" id="8_ucn7c"]
+[ext_resource type="Texture2D" uid="uid://b1yfn5aolkamg" path="res://Assets/Sprites/Deven_Horse.png" id="9_wsio1"]
+
+[node name="Control" type="Control" unique_id=1252094641]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1277506450]
+propagate_maximum_size = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=867669628]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="HorseNames" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1622364569]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/HorseNames" unique_id=7402441]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Horse"
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/HorseNames" unique_id=1630736835]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Horse"
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/HorseNames" unique_id=472654939]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Horse"
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="MarginContainer/HBoxContainer/HorseNames" unique_id=1088023238]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Horse"
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="MarginContainer/HBoxContainer/HorseNames" unique_id=1608042931]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Horse"
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="MarginContainer/HBoxContainer/HorseNames" unique_id=744128383]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Horse"
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="MarginContainer/HBoxContainer/HorseNames" unique_id=1762388545]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Horse"
+vertical_alignment = 1
+
+[node name="Label8" type="Label" parent="MarginContainer/HBoxContainer/HorseNames" unique_id=914351448]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Horse"
+vertical_alignment = 1
+
+[node name="HorseImages" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1936162759]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/HorseImages" unique_id=601910812]
+custom_maximum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+texture = ExtResource("9_wsio1")
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/HBoxContainer/HorseImages" unique_id=1611326265]
+custom_maximum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+texture = ExtResource("9_wsio1")
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/HBoxContainer/HorseImages" unique_id=1719172717]
+custom_maximum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+texture = ExtResource("9_wsio1")
+stretch_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="MarginContainer/HBoxContainer/HorseImages" unique_id=472586734]
+custom_maximum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+texture = ExtResource("9_wsio1")
+stretch_mode = 5
+
+[node name="TextureRect5" type="TextureRect" parent="MarginContainer/HBoxContainer/HorseImages" unique_id=1635871401]
+custom_maximum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+texture = ExtResource("9_wsio1")
+stretch_mode = 5
+
+[node name="TextureRect6" type="TextureRect" parent="MarginContainer/HBoxContainer/HorseImages" unique_id=858720943]
+custom_maximum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+texture = ExtResource("9_wsio1")
+stretch_mode = 5
+
+[node name="TextureRect7" type="TextureRect" parent="MarginContainer/HBoxContainer/HorseImages" unique_id=1695084128]
+custom_maximum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+texture = ExtResource("9_wsio1")
+stretch_mode = 5
+
+[node name="TextureRect8" type="TextureRect" parent="MarginContainer/HBoxContainer/HorseImages" unique_id=116028560]
+custom_maximum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+texture = ExtResource("9_wsio1")
+stretch_mode = 5
+
+[node name="Buttons" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=974080791]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/Buttons" unique_id=1872583609]
+custom_maximum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("1_mwts4")
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/HBoxContainer/Buttons" unique_id=497377809]
+custom_maximum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("2_wsio1")
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/HBoxContainer/Buttons" unique_id=684299464]
+custom_maximum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("3_ulctq")
+stretch_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="MarginContainer/HBoxContainer/Buttons" unique_id=917691692]
+custom_maximum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("4_0lsd7")
+stretch_mode = 5
+
+[node name="TextureRect5" type="TextureRect" parent="MarginContainer/HBoxContainer/Buttons" unique_id=1696096968]
+custom_maximum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("5_shm2x")
+stretch_mode = 5
+
+[node name="TextureRect6" type="TextureRect" parent="MarginContainer/HBoxContainer/Buttons" unique_id=873136784]
+custom_maximum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("6_d6xx3")
+stretch_mode = 5
+
+[node name="TextureRect7" type="TextureRect" parent="MarginContainer/HBoxContainer/Buttons" unique_id=1584244640]
+custom_maximum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("7_5cqsw")
+stretch_mode = 5
+
+[node name="TextureRect8" type="TextureRect" parent="MarginContainer/HBoxContainer/Buttons" unique_id=1370944867]
+custom_maximum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("8_ucn7c")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer" unique_id=1455601347]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+text = "Player #, pick your horse!"

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ctxwinfr06la4"]
 
 [ext_resource type="Script" uid="uid://bk365cu586f5g" path="res://Scripts/crosshair.gd" id="1_otoyv"]
-[ext_resource type="Texture2D" uid="uid://dxpq0yo6i83pr" path="res://Assets/Sprites/Crosshair.png" id="2_otoyv"]
+[ext_resource type="Texture2D" uid="uid://dxpq0yo6i83pr" path="res://Assets/Sprites/ui_elements/Crosshair.png" id="2_otoyv"]
 [ext_resource type="PackedScene" uid="uid://bmfrwj021grtl" path="res://Scenes/PowerSFX/PowerSFX.tscn" id="3_aia6a"]
 
 [node name="Crosshair" type="Node2D" unique_id=961195152]

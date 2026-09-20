@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh28kaofvo7iv"
-path="res://.godot/imported/toolWheel.PNG-7c94612c0c0eeeae64ad535e20244e65.ctex"
+uid="uid://b4fm2xc1mr5ie"
+path="res://.godot/imported/right_button.png-c35d7484452b4ace19a631242bc76d12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/toolWheel.PNG"
-dest_files=["res://.godot/imported/toolWheel.PNG-7c94612c0c0eeeae64ad535e20244e65.ctex"]
+source_file="res://Assets/Sprites/ui_elements/right_button.png"
+dest_files=["res://.godot/imported/right_button.png-c35d7484452b4ace19a631242bc76d12.ctex"]
 
 [params]
 

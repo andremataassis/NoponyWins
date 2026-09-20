@@ -1,4 +1,5 @@
-class_name Horse extends PathFollow3D
+extends Node3D
+class_name Horse
 
 var lap : int = 0
 @onready var horseSFX = $Horse/HorseSFX
@@ -6,7 +7,9 @@ var lap : int = 0
 
 @export var move_speed = 0.1
 @export var horseGallopCooldown : float = 0.4
+@export var horse_name = "default"
 var horseGallopTimer : float = 0
+var racing = false
 
 var _time_alive := 0.0
 const NUM_RACER_VARIANCE_TERMS = 8
@@ -30,6 +33,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
+	if not racing: return
+
 	_time_alive += delta
 	
 	var old_progress = progress_ratio
@@ -46,6 +51,9 @@ func _physics_process(delta: float) -> void:
 		horseGallopTimer = horseGallopCooldown
 		horseSFX.play("GALLOP")
 
+func toggle_racing(r: bool):
+	racing = r
+ 
 # evalutes the sin function 
 func _get_move_step():
 	var accumalted := 0.0
