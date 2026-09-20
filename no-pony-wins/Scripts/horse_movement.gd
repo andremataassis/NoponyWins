@@ -1,6 +1,6 @@
-extends Node3D
+class_name Horse extends PathFollow3D
 
-@onready var path_follow_3d: PathFollow3D = $"."
+var lap : int = 0
 @onready var horseSFX = $Horse/HorseSFX
 @onready var rng = RandomNumberGenerator.new()
 
@@ -32,7 +32,14 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	_time_alive += delta
 	
-	path_follow_3d.progress_ratio += move_speed * _get_move_step() * delta
+	var old_progress = progress_ratio
+	progress_ratio += move_speed * _get_move_step() * delta
+	
+	# check if we progressed a lap
+	if old_progress > progress_ratio:
+		lap += 1 # happens when resets to 0
+		print("lapped! " + str(lap))
+	
 	if horseGallopTimer > 0:
 		horseGallopTimer -= delta
 	else:
