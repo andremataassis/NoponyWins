@@ -13,6 +13,7 @@ const TOTALLY_A_HORSE = preload("uid://cpeylqdshx21h")
 
 @export var tracks : Node3D
 var active_horses: Array[Horse] = []
+const TOTAL_LAPS = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -23,7 +24,11 @@ func _ready() -> void:
 		var horse_instance = horses[h].instantiate()
 		horses.remove_at(h)
 		i.add_child(horse_instance)
+		horse_instance.set_total_laps(TOTAL_LAPS)
 		active_horses.append(horse_instance)
+
+func win_race(horse: Node):
+	pause_horses()
 
 func pause_horses():
 	for horse in active_horses:
