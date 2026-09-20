@@ -76,6 +76,7 @@ func _pick_horse(event: InputEvent):
 
 func _start_race():
 	race_state = RaceState.READY
+	ui_spawner.show_laps()
 	var countdown : float = 1.4
 	raceMusic.play(10.285)
 	while (raceMusic.get_playback_position() < 12):

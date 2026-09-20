@@ -10,6 +10,8 @@ var horse_sel_instance = null
 var canvas_size: Vector2
 var ready_countdown = false
 
+@export var lap_count_ref : Label = null
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
@@ -20,6 +22,12 @@ func make_crosshair(c : Color):
 	add_child(crosshair_instance)
 	crosshair_instance.get_child(0).modulate = c
 	return crosshair_instance
+
+func show_laps():
+	lap_count_ref.visible = true
+
+func update_lap_count(lap: int, tot_lap: int):
+	lap_count_ref.text = "Lap %d/%d" % [lap + 1, tot_lap]
 
 func init_horse_selection_screen(horses: Array[Horse]):
 	get_child(0).queue_free()

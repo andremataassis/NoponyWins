@@ -21,6 +21,7 @@ var _racer_variance_parameters : Array[float] = []
 var _advantage : float = 1.0
 
 signal horseWin(horse: Horse)
+signal horseLap(lap: int, tot_lap: int)
 
 # Called when the node enters the scene tree for the first time.
 # idk maybe make them wait for the start of the race here???
@@ -48,7 +49,8 @@ func _physics_process(delta: float) -> void:
 	# check if we progressed a lap
 	if old_progress > progress_ratio:
 		lap += 1 # happens when resets to 0
-		if lap > TOTAL_LAPS:
+		horseLap.emit(lap, TOTAL_LAPS)
+		if lap >= TOTAL_LAPS:
 			horseWin.emit(self)
 			print("Horse '%s' wins!" % [horse_name])
 		#print("lapped! " + str(lap))

@@ -13,6 +13,7 @@ const UNICORN = preload("uid://pjbv0asbot3v")
 const GOBBY_HORSE = preload("uid://uxlf0phdy78l")
 @export var TOTAL_LAPS: int = 3
 @export var race_handler : RaceHandler
+@export var ui_spawner : UISpawner
 
 
 @export var tracks : Node3D
@@ -29,11 +30,15 @@ func _ready() -> void:
 		i.add_child(horse_instance)
 		horse_instance.set_total_laps(TOTAL_LAPS)
 		horse_instance.horseWin.connect(win_race)
+		horse_instance.horseLap.connect(count_lap)
 		active_horses.append(horse_instance)
 
 func pause_horses():
 	for horse in active_horses:
 		horse.toggle_racing(false)
+
+func count_lap(lap: int, tot_lap: int):
+	ui_spawner.update_lap_count(lap, tot_lap)
 
 func win_race(horse: Horse):
 	pause_horses()
