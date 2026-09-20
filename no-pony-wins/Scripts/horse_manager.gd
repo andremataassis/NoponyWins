@@ -9,13 +9,14 @@ const TIMM_HORSE = preload("uid://dys2vux5kc3b3")
 const TROPHY_HORSE = preload("uid://dm5mcf7w6myrw")
 const DEVEN_HORSE = preload("uid://dv4kb1nbw3d3a")
 const __HORSE = preload("uid://bob0lrymw50b3")
+const TOTALLY_A_HORSE = preload("uid://cpeylqdshx21h")
 
 @export var tracks : Node3D
 var active_horses: Array[Horse] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var horses = [DEFAULT_HORSE, JAMES_BIRD, DRAGON_HORSE, UNICORN, TIMM_HORSE, TROPHY_HORSE, DEVEN_HORSE, __HORSE]
+	var horses = [DEFAULT_HORSE, JAMES_BIRD, DRAGON_HORSE, UNICORN, TIMM_HORSE, TROPHY_HORSE, DEVEN_HORSE, __HORSE, TOTALLY_A_HORSE]
 	#instantiate horses
 	for i in tracks.get_children():
 		var h = randi_range(0, horses.size() - 1)
