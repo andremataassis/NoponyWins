@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cfujj61hrcklc" path="res://Scenes/Envrionment/tree.tscn" id="8_huasi"]
 [ext_resource type="Texture2D" uid="uid://bjl1a72s1tfyn" path="res://Assets/Sprites/Sky.png" id="10_76v2p"]
 [ext_resource type="AudioStream" uid="uid://dqb0jvg31wv4w" path="res://Assets/Sounds/Music/No Pony Wins.wav" id="11_76v2p"]
+[ext_resource type="Script" uid="uid://dqti5adnm20je" path="res://Scenes/dude_spawner.gd" id="12_drdnd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m1efj"]
 albedo_texture = ExtResource("4_mai8y")
@@ -126,3 +127,39 @@ environment = SubResource("Environment_c5pkk")
 [node name="RaceMusic" type="AudioStreamPlayer" parent="." unique_id=1261564821]
 stream = ExtResource("11_76v2p")
 autoplay = true
+
+[node name="DudeSpawnArea4" type="Node3D" parent="." unique_id=1946882873 node_paths=PackedStringArray("corner")]
+transform = Transform3D(-4.3711392e-08, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, -4.3711392e-08, 24.927053, 1.333, 8.847729)
+script = ExtResource("12_drdnd")
+corner = NodePath("corner")
+dudes_count = 150
+
+[node name="corner" type="Node3D" parent="DudeSpawnArea4" unique_id=691163847]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.322128, 0, -13.873643)
+
+[node name="DudeSpawnArea3" type="Node3D" parent="." unique_id=225666227 node_paths=PackedStringArray("corner")]
+transform = Transform3D(-0.9999454, 0, 0.010447701, 0, 1, 0, -0.010447701, 0, -0.9999454, 20.344748, 1.333, 9.072)
+script = ExtResource("12_drdnd")
+corner = NodePath("corner")
+dudes_count = 150
+
+[node name="corner" type="Node3D" parent="DudeSpawnArea3" unique_id=704932848]
+transform = Transform3D(1.0000002, 0, 0, 0, 1, 0, 0, 0, 1.0000002, 38.17446, 0, -14.081066)
+
+[node name="DudeSpawnArea2" type="Node3D" parent="." unique_id=1974667375 node_paths=PackedStringArray("corner")]
+transform = Transform3D(0.005223922, 0, 0.99998635, 0, 1, 0, -0.99998635, 0, 0.005223922, -9.639041, 1.333, 18.973948)
+script = ExtResource("12_drdnd")
+corner = NodePath("corner")
+dudes_count = 150
+
+[node name="corner" type="Node3D" parent="DudeSpawnArea2" unique_id=1530798702]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.11632, 0, -13.982269)
+
+[node name="DudeSpawnArea" type="Node3D" parent="." unique_id=1750009474 node_paths=PackedStringArray("corner")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.501437, 1.3331938, -7.180167)
+script = ExtResource("12_drdnd")
+corner = NodePath("corner")
+dudes_count = 150
+
+[node name="corner" type="Node3D" parent="DudeSpawnArea" unique_id=1429968365]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.909805, 0, -13.873643)
