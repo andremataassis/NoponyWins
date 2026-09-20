@@ -28,9 +28,10 @@ func _init(pid: int, did: int, h: Node, char_meter: Node, crosshair: Node):
 func _set_horse(h: Node):
 	horse = h
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func use_current_power():
+	crosshair_ref.attack(selected_power)
+	selected_power = Powers.NONE
+	charge = 0.0
 
 #call this in _process
 func refill_meter(delta: float):
@@ -75,14 +76,13 @@ func handle_input(event: InputEvent):
 	if event.is_action_pressed("airhorn") && charge == 100.0:
 		if selected_power == Powers.AIRHORN:
 			print("FWOOOOOOOOO- Player %d" % [player_id])
-			crosshair_ref.attack(Powers.AIRHORN)
 			selected_power = Powers.NONE
 			charge = 0.0
+			crosshair_ref.attack(Powers.AIRHORN)
 		else:
 			print("Selected AIRHORN - Player %d" % [player_id])
 			crosshair_ref.disable_crosshair()
 			selected_power = Powers.AIRHORN
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

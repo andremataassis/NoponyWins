@@ -1,4 +1,5 @@
 extends Node3D
+class_name RaceHandler
 
 enum RaceState {PICKING_HORSES, RACING, GAME_OVER}
 @export var ui_spawner: UI_SPAWNER
@@ -11,7 +12,7 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func _input(event: InputEvent) -> void:
-	#Ignore mouse events
+	#Ignore mouse and joypad events
 	if event is InputEventMouse: return
 	if event is InputEventJoypadMotion: return
 	
@@ -60,6 +61,10 @@ func _add_player(event: InputEvent):
 	var player = Player.new(player_id, device_id, null, charge_meter, crosshair)
 	player_array.append(player)
 	print("Player %d added with device %d and crosshair %d" % [player.player_id, player.device_id, crosshair.get_instance_id()])
+
+func airhorn_used():
+	for player in player_array:
+		player.use_current_power()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

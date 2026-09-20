@@ -4,6 +4,7 @@ class_name Crosshair
 @onready var crosshair: Node2D = $"."
 @onready var horse_tracks: Node3D = $"../../../HorseTracks"
 @onready var powerSFX = $PowerSFX
+@onready var race_handler : RaceHandler = get_tree().current_scene
 var start_y: float
 var enabled_time: float
 
@@ -28,7 +29,7 @@ func _process(_delta: float) -> void:
 	position.y = start_y + sin(time) * 150 + 50
 
 func attack(power : Player.Powers) -> void:
-	if power == Player.Powers.NONE || !crosshair.visible: return
+	if power == Player.Powers.NONE: return
 	# map position.y to horse number
 	var horse = round(8 - ((position.y - 150) * 7 / 300))
 	print(horse)
@@ -71,4 +72,6 @@ func attack(power : Player.Powers) -> void:
 			horse_tracks.get_child(target2).get_child(0).reparent(horse_tracks.get_child(horse), false)
 			horse_tracks.get_child(horse).get_child(0).reparent(horse_tracks.get_child(target2), false)
 		Player.Powers.AIRHORN:
+			print("broadcasted")
+			race_handler.airhorn_used()
 			pass
