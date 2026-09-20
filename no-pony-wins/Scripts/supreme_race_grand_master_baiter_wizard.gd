@@ -13,16 +13,17 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	#Ignore mouse events
 	if event is InputEventMouse: return
+	if event is InputEventJoypadMotion: return
 	
 	#handle input based on race state
 	if race_state == RaceState.PICKING_HORSES:
 		#add the player to the game if it is new input
 		if _check_if_player_added(event.device) == false:
 			_add_player(event)
-			race_state = RaceState.RACING
 		#pick horse if they have already been added
 		else:
 			_pick_horse(event)
+			if event.is_action_pressed("confirm"): race_state = RaceState.RACING
 	if race_state == RaceState.RACING:
 		_handle_player_input(event)
 
@@ -54,11 +55,11 @@ func _check_if_player_added(device_id: int):
 func _add_player(event: InputEvent):
 	var device_id = event.device
 	var player_id = player_array.size() + 1
-	var crosshair = ui_spawner.make_crosshair()
+	var crosshair = ui_spawner.make_crosshair(Player.COLORS[player_id - 1])
 	var charge_meter = ui_spawner.place_charge_meter(player_id) 
 	var player = Player.new(player_id, device_id, null, charge_meter, crosshair)
 	player_array.append(player)
-	print("Player %d added with device %d" % [player.player_id, player.device_id])
+	print("Player %d added with device %d and crosshair %d" % [player.player_id, player.device_id, crosshair.get_instance_id()])
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
