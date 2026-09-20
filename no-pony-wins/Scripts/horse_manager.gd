@@ -11,7 +11,7 @@ const TOTALLY_A_HORSE = preload("uid://cpeylqdshx21h")
 const TROPHY_HORSE = preload("uid://dm5mcf7w6myrw")
 const UNICORN = preload("uid://pjbv0asbot3v")
 const GOBBY_HORSE = preload("uid://uxlf0phdy78l")
-@export var TOTAL_LAPS: int = 3
+@export var TOTAL_LAPS: int = 5
 @export var race_handler : RaceHandler
 @export var ui_spawner : UISpawner
 

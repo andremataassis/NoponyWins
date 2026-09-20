@@ -48,7 +48,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_m1efj")
 [node name="HorseManager" type="Node3D" parent="." unique_id=393490325 node_paths=PackedStringArray("race_handler", "ui_spawner", "tracks")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.038118124, 0.8267852, -2.5503063)
 script = ExtResource("1_52fb6")
-TOTAL_LAPS = null
 race_handler = NodePath("..")
 ui_spawner = NodePath("../CanvasLayer/Ui")
 tracks = NodePath("../HorseTracks")
@@ -88,7 +87,7 @@ layout_mode = 1
 offset_right = 40.0
 offset_bottom = 23.0
 theme_override_font_sizes/font_size = 45
-text = "Lap 1/3"
+text = "Lap 1/5"
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1463849988]
 anchors_preset = 1

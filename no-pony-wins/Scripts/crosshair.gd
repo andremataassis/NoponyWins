@@ -84,8 +84,16 @@ func attack(power : Player.Powers) -> void:
 			powerSFX.play("PORTAL")
 			var rng = RandomNumberGenerator.new()
 			var target2 = rng.randi_range(0, 7)
-			horse_tracks.get_child(target2).get_child(0).reparent(horse_tracks.get_child(horse), false)
-			horse_tracks.get_child(horse).get_child(0).reparent(horse_tracks.get_child(target2), false)
+			var h1 : Horse = horse_tracks.get_child(target2).get_child(0)
+			var h2 : Horse = horse_tracks.get_child(horse).get_child(0)
+			var p1 = h1.progress_ratio
+			var p2 = h2.progress_ratio
+
+			h1.reparent(horse_tracks.get_child(horse), false)
+			h2.reparent(horse_tracks.get_child(target2), false)
+
+			h1.progress_ratio = p2
+			h2.progress_ratio = p1
 		Player.Powers.AIRHORN:
 			#play neigh sound
 			powerSFX.play("NEIGH")
