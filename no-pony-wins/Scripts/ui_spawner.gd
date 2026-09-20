@@ -7,6 +7,7 @@ const HORSE_SELECTION = preload("uid://bni63ghyc7tpx")
 const TIMM_HORSE_SS = preload("uid://7p0c6axvawmg")
 var horse_sel_instance = null
 var canvas_size: Vector2
+var ready_countdown = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

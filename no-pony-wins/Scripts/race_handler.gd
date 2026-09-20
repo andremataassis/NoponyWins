@@ -1,9 +1,10 @@
 extends Node3D
 class_name RaceHandler
 
-enum RaceState {ADDING_PLAYERS, PICKING_HORSES, RACING, GAME_OVER}
+enum RaceState {ADDING_PLAYERS, PICKING_HORSES, RACING, GAME_OVER, READY}
 @export var ui_spawner: UISpawner
 @export var horse_manager: HorseManager
+@onready var raceMusic : AudioStreamPlayer = $RaceMusic
 
 var player_array: Array[Player] = []
 const MAX_PLAYERS = 4
@@ -74,6 +75,10 @@ func _pick_horse(event: InputEvent):
 	pass
 
 func _start_race():
+	race_state = RaceState.READY
+	raceMusic.play(10.285)
+	while (raceMusic.get_playback_position() < 12):
+		await (get_tree().create_timer(0.1).timeout)
 	ui_spawner.delete_horse_selection_ui()
 	horse_manager.unpause_horses()
 	race_state = RaceState.RACING
@@ -123,3 +128,6 @@ func _process(delta: float) -> void:
 	if race_state == RaceState.RACING:
 		for player in player_array:
 			player.refill_meter(delta)
+	elif race_state != RaceState.READY:
+		if raceMusic.get_playback_position() >= 6.857:
+			raceMusic.play(0)
