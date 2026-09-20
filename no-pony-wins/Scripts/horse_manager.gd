@@ -11,6 +11,9 @@ const TOTALLY_A_HORSE = preload("uid://cpeylqdshx21h")
 const TROPHY_HORSE = preload("uid://dm5mcf7w6myrw")
 const UNICORN = preload("uid://pjbv0asbot3v")
 const GOBBY_HORSE = preload("uid://uxlf0phdy78l")
+@export var TOTAL_LAPS: int = 3
+@export var race_handler : RaceHandler
+
 
 @export var tracks : Node3D
 var active_horses: Array[Horse] = []
@@ -24,11 +27,17 @@ func _ready() -> void:
 		var horse_instance : Horse = horses[h].instantiate()
 		horses.remove_at(h)
 		i.add_child(horse_instance)
+		horse_instance.set_total_laps(TOTAL_LAPS)
+		horse_instance.horseWin.connect(win_race)
 		active_horses.append(horse_instance)
 
 func pause_horses():
 	for horse in active_horses:
 		horse.toggle_racing(false)
+
+func win_race(horse: Horse):
+	pause_horses()
+	race_handler.win_race(horse)
 
 func unpause_horses():
 	for horse in active_horses:

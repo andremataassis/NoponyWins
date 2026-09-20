@@ -110,6 +110,13 @@ func _check_if_player_added(device_id: int) -> bool:
 		if player.device_id == device_id: return true
 	return false
 
+func win_race(horse: Horse):
+	var win_player: Array[String] = []
+	for player in player_array:
+		if player.horse == horse:
+			win_player.append("Player %d" % [player.player_id])
+	ui_spawner.spawn_win_screen(win_player, horse)
+
 func _get_player_from_device(device_id: int) -> Player:
 	for player in player_array:
 		if player.device_id == device_id: return player

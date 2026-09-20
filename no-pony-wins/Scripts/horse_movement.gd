@@ -11,11 +11,13 @@ var lap : int = 0
 var horseGallopTimer : float = 0
 var racing = false
 
+var TOTAL_LAPS = -1 #do not change
 var _time_alive := 0.0
 const NUM_RACER_VARIANCE_TERMS = 8
 var _racer_variance_parameters : Array[float] = []
 var _advantage : float = 1.0
 
+signal horseWin(horse: Horse)
 
 # Called when the node enters the scene tree for the first time.
 # idk maybe make them wait for the start of the race here???
@@ -28,7 +30,7 @@ func _ready() -> void:
 		_racer_variance_parameters.append(randf() * 2 * PI) # offset
 	
 	# the one that matters
-	_advantage = randf() * .04
+	_advantage = randf() * .01
 	#print(str(get_parent().name) + " has " + str(_advantage))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -43,6 +45,9 @@ func _physics_process(delta: float) -> void:
 	# check if we progressed a lap
 	if old_progress > progress_ratio:
 		lap += 1 # happens when resets to 0
+		if lap > TOTAL_LAPS:
+			horseWin.emit(self)
+			print("Horse '%s' wins!" % [horse_name])
 		#print("lapped! " + str(lap))
 	
 	if horseGallopTimer > 0:
@@ -50,6 +55,9 @@ func _physics_process(delta: float) -> void:
 	else:
 		horseGallopTimer = horseGallopCooldown
 		horseSFX.play("GALLOP")
+
+func set_total_laps(laps: int):
+	TOTAL_LAPS = laps
 
 func toggle_racing(r: bool):
 	racing = r
