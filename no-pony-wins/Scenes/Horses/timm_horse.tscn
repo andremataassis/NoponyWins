@@ -24,6 +24,7 @@ albedo_color = Color(0, 0, 0, 1)
 
 [node name="PathFollow3D" type="PathFollow3D" unique_id=2064781809]
 script = ExtResource("1_m2ob5")
+horse_name = "Timm Horse"
 
 [node name="Horse" type="RigidBody3D" parent="." unique_id=1005567097]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)

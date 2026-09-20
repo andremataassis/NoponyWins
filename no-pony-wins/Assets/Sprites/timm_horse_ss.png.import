@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxpq0yo6i83pr"
-path="res://.godot/imported/Crosshair.png-e4f949ba0d2882e526e3951d2190b544.ctex"
+uid="uid://7p0c6axvawmg"
+path="res://.godot/imported/timm_horse_ss.png-0b68120b025daf509fb9c396d38dc439.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Crosshair.png"
-dest_files=["res://.godot/imported/Crosshair.png-e4f949ba0d2882e526e3951d2190b544.ctex"]
+source_file="res://Assets/Sprites/timm_horse_ss.png"
+dest_files=["res://.godot/imported/timm_horse_ss.png-0b68120b025daf509fb9c396d38dc439.ctex"]
 
 [params]
 

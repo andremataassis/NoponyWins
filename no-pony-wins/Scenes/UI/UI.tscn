@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dtge7gr2tsuum"]
+
+[ext_resource type="Script" uid="uid://chqw76adblo3t" path="res://Scripts/ui_spawner.gd" id="1_s86y4"]
+
+[node name="Ui" type="Control" unique_id=79820238]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s86y4")

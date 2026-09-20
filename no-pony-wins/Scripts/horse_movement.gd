@@ -1,4 +1,5 @@
 extends Node3D
+class_name Horse
 
 @onready var path_follow_3d: PathFollow3D = $"."
 @onready var horseSFX = $Horse/HorseSFX
@@ -6,9 +7,9 @@ extends Node3D
 
 @export var move_speed = 0.1
 @export var horseGallopCooldown : float = 0.4
+@export var horse_name = "default"
 var horseGallopTimer : float = 0
-
-
+var racing = false
 
 # Called when the node enters the scene tree for the first time.
 # idk maybe make them wait for the start of the race here???
@@ -18,12 +19,16 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
+	if not racing: return
 	path_follow_3d.progress_ratio += (move_speed * (.5 + randf())) * delta
 	if horseGallopTimer > 0:
 		horseGallopTimer -= delta
 	else:
 		horseGallopTimer = horseGallopCooldown
 		horseSFX.play("GALLOP")
+
+func toggle_racing(r: bool):
+	racing = r
 
 # these guys are called from the crosshair script (to be added)
 func bomb() -> void:

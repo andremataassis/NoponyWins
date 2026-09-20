@@ -9,6 +9,7 @@
 
 [node name="DevenHorse" type="PathFollow3D" unique_id=907072540]
 script = ExtResource("1_nyk06")
+horse_name = "Deven Horse"
 
 [node name="Horse" type="RigidBody3D" parent="." unique_id=1680265979]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
