@@ -43,9 +43,12 @@ func delete_horse_selection_ui():
 	if horse_sel_instance != null:
 		horse_sel_instance.queue_free()
 
-func place_charge_meter(player_id : int):
+func place_charge_meter(player_id : int, color: Color):
 	var charge_instance = CHARGE_METER.instantiate()
 	add_child(charge_instance)
+	var stylebox = StyleBoxFlat.new()
+	charge_instance.get_child(0).add_theme_stylebox_override("fill", stylebox)
+	stylebox.bg_color = color
 	charge_instance.get_child(0).position = Vector2(((canvas_size.x - canvas_size.x / 15) / 4) * (player_id - 1) + canvas_size.x / 15, canvas_size.y - canvas_size.y / 15)
 	return charge_instance
 

@@ -109,7 +109,7 @@ func _add_player(event: InputEvent):
 	var device_id = event.device
 	var player_id = player_array.size() + 1
 	var crosshair = ui_spawner.make_crosshair(Player.COLORS[player_id - 1])
-	var charge_meter = ui_spawner.place_charge_meter(player_id) 
+	var charge_meter = ui_spawner.place_charge_meter(player_id, Player.COLORS[player_id - 1]) 
 	var player = Player.new(player_id, device_id, null, charge_meter, crosshair)
 	player_array.append(player)
 	print("Player %d added with device %d and crosshair %d" % [player.player_id, player.device_id, crosshair.get_instance_id()])
