@@ -2,11 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://cmlccalu8u4vy" path="res://Assets/Sprites/audience_dudes/dude1.png" id="1_70scq"]
 [ext_resource type="Script" uid="uid://bmkhpu4u7v3du" path="res://Scripts/audience_dude.gd" id="1_vpjp8"]
+[ext_resource type="Script" uid="uid://dpk8f3lu610gc" path="res://Scripts/billboard.gd" id="3_lqner"]
 
 [node name="Dude" type="Node3D" unique_id=1812215453]
 script = ExtResource("1_vpjp8")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=161228312]
 offset = Vector2(0, 300)
+flip_h = true
 pixel_size = 0.001
 texture = ExtResource("1_70scq")
+script = ExtResource("3_lqner")

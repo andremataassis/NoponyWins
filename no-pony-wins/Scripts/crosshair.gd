@@ -5,6 +5,10 @@ class_name Crosshair
 @onready var horse_tracks: Node3D = $"../../../HorseTracks"
 @onready var powerSFX = $PowerSFX
 @onready var race_handler : RaceHandler = get_tree().current_scene.get_child(0)
+
+#Powerup variables
+@export var jetpack_duration: float = 0.5
+
 var start_y: float
 var enabled_time: float
 
@@ -73,7 +77,7 @@ func attack(power : Player.Powers) -> void:
 			#play jetpack sound:
 			powerSFX.play("JETPACK")
 			horse_tracks.get_child(horse).get_child(0).jetpack()
-			await get_tree().create_timer(1.0).timeout
+			await get_tree().create_timer(jetpack_duration).timeout
 			horse_tracks.get_child(horse).get_child(0).reset_speed()
 		Player.Powers.PORTAL:
 			#play portal sound
