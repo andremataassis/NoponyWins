@@ -5,8 +5,7 @@ extends Node2D
 enum sfxType {
 	BOMB,
 	JETPACK,
-	PORTAL,
-	NEIGH
+	PORTAL
 }
 
 func play(soundEffect : String):

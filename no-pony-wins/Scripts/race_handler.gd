@@ -79,13 +79,6 @@ func _start_race():
 	race_state = RaceState.RACING
 	print("Started Race!")
 
-func win_race(horse: Horse):
-	var win_player: Array[String] = []
-	for player in player_array:
-		if player.horse == horse:
-			win_player.append("Player %d" % [player.player_id])
-	ui_spawner.spawn_win_screen(win_player, horse)
-
 func _handle_player_input(event: InputEvent):
 	#get player
 	var player: Player = null
@@ -121,7 +114,7 @@ func _add_player(event: InputEvent):
 	player_array.append(player)
 	print("Player %d added with device %d and crosshair %d" % [player.player_id, player.device_id, crosshair.get_instance_id()])
 
-func neigh_used():
+func airhorn_used():
 	for player in player_array:
 		player.use_current_power()
 

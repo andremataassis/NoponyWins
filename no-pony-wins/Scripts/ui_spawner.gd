@@ -5,7 +5,6 @@ const CROSSHAIR = preload("uid://ctxwinfr06la4")
 const CHARGE_METER = preload("res://Scenes/UI/charge_meter.tscn")
 const HORSE_SELECTION = preload("uid://bni63ghyc7tpx")
 const TIMM_HORSE_SS = preload("uid://7p0c6axvawmg")
-const WIN_SCREEN = preload("uid://c3i40q8kd5ct4")
 var horse_sel_instance = null
 var canvas_size: Vector2
 
@@ -52,15 +51,6 @@ func place_charge_meter(player_id : int, color: Color):
 	stylebox.bg_color = color
 	charge_instance.get_child(0).position = Vector2(((canvas_size.x - canvas_size.x / 15) / 4) * (player_id - 1) + canvas_size.x / 15, canvas_size.y - canvas_size.y / 15)
 	return charge_instance
-
-func spawn_win_screen(win_players: Array[String], horse: Horse):
-	var win_screen_ref = WIN_SCREEN.instantiate()
-	add_child(win_screen_ref)
-	var players_string = "\n".join(PackedStringArray(win_players))
-	if win_players.size() == 0:
-		win_screen_ref.get_child(0).text = "'%s' has won the race!\n\nNopony Wins!" % [horse.horse_name]
-	else:
-		win_screen_ref.get_child(0).text = "'%s' has won the race!\nThese players(s) bet on the right horse:\n %s" % [horse.horse_name, players_string]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

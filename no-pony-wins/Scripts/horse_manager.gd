@@ -12,16 +12,11 @@ const TROPHY_HORSE = preload("uid://dm5mcf7w6myrw")
 const UNICORN = preload("uid://pjbv0asbot3v")
 
 
-@export var TOTAL_LAPS: int = 3
 @export var tracks : Node3D
-@export var race_handler : RaceHandler
 var active_horses: Array[Horse] = []
-
-static var inst : HorseManager
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	inst = self
 	var horses = [DEFAULT_HORSE, JAMES_BIRD, DRAGON_HORSE, UNICORN, TIMM_HORSE, TROPHY_HORSE, DEVEN_HORSE, __HORSE, TOTALLY_A_HORSE]
 	#instantiate horses
 	for i in tracks.get_children():
@@ -29,12 +24,7 @@ func _ready() -> void:
 		var horse_instance : Horse = horses[h].instantiate()
 		horses.remove_at(h)
 		i.add_child(horse_instance)
-		horse_instance.set_total_laps(TOTAL_LAPS)
 		active_horses.append(horse_instance)
-
-func win_race(horse: Horse):
-	pause_horses()
-	race_handler.win_race(horse)
 
 func pause_horses():
 	for horse in active_horses:

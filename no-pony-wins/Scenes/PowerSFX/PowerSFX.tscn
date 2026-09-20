@@ -8,8 +8,6 @@
 [ext_resource type="Script" uid="uid://dlywxnwaonf50" path="res://Scenes/PowerSFX/portal_sfx.gd" id="6_y2aqu"]
 [ext_resource type="AudioStream" uid="uid://rxe56r0gfotr" path="res://Assets/Sounds/SFX/sfx_portal.wav" id="7_gfg1c"]
 [ext_resource type="AudioStream" uid="uid://d2fonwn6tmos4" path="res://Assets/Sounds/SFX/sfx_portal_2.wav" id="8_75lju"]
-[ext_resource type="Script" uid="uid://nok13knrdycn" path="res://Scenes/PowerSFX/neigh_sfx.gd" id="9_f4yim"]
-[ext_resource type="AudioStream" uid="uid://d0tqg525fujom" path="res://Assets/Sounds/SFX/sfx_Neigh_1.wav" id="9_rx020"]
 
 [node name="PowerSFX" type="Node2D" unique_id=1032374660]
 script = ExtResource("1_0oa1u")
@@ -37,11 +35,4 @@ bus = &"SFX"
 
 [node name="SFX_PORTAL_2" type="AudioStreamPlayer" parent="PortalSFX" unique_id=1904959258]
 stream = ExtResource("8_75lju")
-bus = &"SFX"
-
-[node name="NeighSFX" type="Node2D" parent="." unique_id=680294849]
-script = ExtResource("9_f4yim")
-
-[node name="SFX_NEIGH_1" type="AudioStreamPlayer" parent="NeighSFX" unique_id=359512311]
-stream = ExtResource("9_rx020")
 bus = &"SFX"
