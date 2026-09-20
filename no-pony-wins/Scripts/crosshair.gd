@@ -8,6 +8,8 @@ class_name Crosshair
 var start_y: float
 var enabled_time: float
 
+const BOMB_EXPLOSION = preload("uid://njao2abs8rxa")
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	crosshair.hide()
@@ -53,6 +55,11 @@ func attack(power : Player.Powers) -> void:
 				if (target == -1):
 					continue
 				horse_tracks.get_child(target).get_child(0).bomb()
+			
+			#play explosion effect at center horse
+			var explosion = BOMB_EXPLOSION.instantiate()
+			get_tree().root.add_child(explosion)
+			explosion.global_position = horse_tracks.get_child(targets[1]).get_child(0).global_position
 			
 			# wait
 			await get_tree().create_timer(1.0).timeout
