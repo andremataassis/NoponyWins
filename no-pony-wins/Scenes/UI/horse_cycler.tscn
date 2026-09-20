@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bo4dq887scwyg"]
+
+[ext_resource type="Script" uid="uid://jcjgeyq1yvtq" path="res://Scripts/horse_cycler.gd" id="1_pedol"]
+
+[node name="HorseCycler" type="Node3D" unique_id=1304785756]
+script = ExtResource("1_pedol")
+interval = 0.75
+direction = Vector3(0, 0, -2)
+
+[node name="Timer" type="Timer" parent="." unique_id=1472811761]

@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://bh25gyoc63jxe"]
 
 [ext_resource type="Script" uid="uid://8o6rpr0lxuvm" path="res://Scripts/scene_relay.gd" id="1_juhg0"]
+[ext_resource type="FontFile" uid="uid://p6x53vy85onx" path="res://Assets/RyeFont/Rye-Regular.ttf" id="2_m6uer"]
+[ext_resource type="PackedScene" uid="uid://bo4dq887scwyg" path="res://Scenes/UI/horse_cycler.tscn" id="3_a43kq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kqfgo"]
+font = ExtResource("2_m6uer")
 font_size = 32
 
 [sub_resource type="LabelSettings" id="LabelSettings_32gta"]
+font = ExtResource("2_m6uer")
 font_size = 64
 
 [node name="StartMenu" type="Control" unique_id=88530644]
@@ -16,6 +20,20 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_juhg0")
+
+[node name="Panel" type="Panel" parent="." unique_id=1646005945]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -111.0
+offset_right = 237.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Button" type="Button" parent="." unique_id=1588417529]
 layout_mode = 1
@@ -64,5 +82,35 @@ text = "NoPony Wins"
 label_settings = SubResource("LabelSettings_32gta")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="HorseCycler" parent="." unique_id=1304785756 instance=ExtResource("3_a43kq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 3, 9)
+
+[node name="HorseCycler2" parent="." unique_id=947636516 instance=ExtResource("3_a43kq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2, -9)
+direction = Vector3(0, 0, 2)
+
+[node name="HorseCycler3" parent="." unique_id=645319946 instance=ExtResource("3_a43kq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 9)
+
+[node name="HorseCycler4" parent="." unique_id=1782342922 instance=ExtResource("3_a43kq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -9)
+direction = Vector3(0, 0, 2)
+
+[node name="HorseCycler5" parent="." unique_id=1666758764 instance=ExtResource("3_a43kq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -1, 9)
+
+[node name="HorseCycler6" parent="." unique_id=58783827 instance=ExtResource("3_a43kq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -2, -9)
+direction = Vector3(0, 0, 2)
+
+[node name="HorseCycler7" parent="." unique_id=925133918 instance=ExtResource("3_a43kq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -3, 9)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=63585885]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2, 0, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=296224117]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.5465298, 0, 0)
 
 [connection signal="pressed" from="Button" to="." method="to_game"]
