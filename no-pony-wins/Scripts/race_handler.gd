@@ -11,22 +11,22 @@ var race_state = RaceState.ADDING_PLAYERS
 var player_picking = -1
 
 var horse_button_vals: Dictionary = {
-	JOY_BUTTON_A: 0,
-	JOY_BUTTON_B: 1,
-	JOY_BUTTON_X: 2,
-	JOY_BUTTON_Y: 3,
-	JOY_BUTTON_DPAD_UP: 4,
-	JOY_BUTTON_DPAD_RIGHT: 5,
-	JOY_BUTTON_DPAD_DOWN: 6,
-	JOY_BUTTON_DPAD_LEFT: 7,
-	KEY_Z: 0,
-	KEY_X: 1,
-	KEY_C: 2,
-	KEY_V: 3,
-	KEY_UP: 4,
-	KEY_RIGHT: 5,
-	KEY_DOWN: 6,
-	KEY_LEFT: 7
+	JOY_BUTTON_A: 7,
+	JOY_BUTTON_B: 6,
+	JOY_BUTTON_X: 5,
+	JOY_BUTTON_Y: 4,
+	JOY_BUTTON_DPAD_UP: 3,
+	JOY_BUTTON_DPAD_RIGHT: 2,
+	JOY_BUTTON_DPAD_DOWN: 1,
+	JOY_BUTTON_DPAD_LEFT: 0,
+	KEY_Z: 7,
+	KEY_X: 6,
+	KEY_C: 5,
+	KEY_V: 4,
+	KEY_UP: 3,
+	KEY_RIGHT: 2,
+	KEY_DOWN: 1,
+	KEY_LEFT: 0
 }
 
 # Called when the node enters the scene tree for the first time.
