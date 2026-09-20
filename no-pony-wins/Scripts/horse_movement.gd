@@ -1,4 +1,4 @@
-extends Node3D
+extends PathFollow3D
 class_name Horse
 
 var lap : int = 0
