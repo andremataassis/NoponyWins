@@ -9,10 +9,23 @@
 [ext_resource type="PackedScene" uid="uid://dtge7gr2tsuum" path="res://Scenes/UI/UI.tscn" id="4_x6ack"]
 [ext_resource type="Texture2D" uid="uid://dh28kaofvo7iv" path="res://Assets/Sprites/ui_elements/toolWheel.PNG" id="7_maf8m"]
 [ext_resource type="PackedScene" uid="uid://cfujj61hrcklc" path="res://Scenes/Envrionment/tree.tscn" id="8_huasi"]
+[ext_resource type="Texture2D" uid="uid://bjl1a72s1tfyn" path="res://Assets/Sprites/Sky.png" id="10_76v2p"]
 [ext_resource type="AudioStream" uid="uid://dqb0jvg31wv4w" path="res://Assets/Sounds/Music/No Pony Wins.wav" id="11_76v2p"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m1efj"]
 albedo_texture = ExtResource("4_mai8y")
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_mai8y"]
+panorama = ExtResource("10_76v2p")
+
+[sub_resource type="Sky" id="Sky_68r4r"]
+sky_material = SubResource("PanoramaSkyMaterial_mai8y")
+
+[sub_resource type="Environment" id="Environment_c5pkk"]
+background_mode = 2
+sky = SubResource("Sky_68r4r")
+sky_rotation = Vector3(-0.39095375, 0, -0.9669124)
+ambient_light_color = Color(0.3534659, 0.65102696, 0.7785234, 1)
 
 [node name="RaceHandler" type="Node3D" unique_id=564690262 node_paths=PackedStringArray("ui_spawner", "horse_manager")]
 script = ExtResource("1_maf8m")
@@ -55,7 +68,7 @@ offset_right = 403.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 21
-text = "Press any button to join the game, hit 'A' on the keyboard or UP D-PAD on controller when everyone's in!"
+text = "Press any button to join the game, hit 'A' on the keyboard or RIGHT SHOULDER on controller when everyone's in!"
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1463849988]
 anchors_preset = 1
@@ -106,6 +119,9 @@ transform = Transform3D(0.33462963, 0, -0.9423497, 0, 1, 0, 0.9423497, 0, 0.3346
 
 [node name="tree12" parent="Environment" unique_id=1578218392 instance=ExtResource("8_huasi")]
 transform = Transform3D(-0.17582089, 0, -0.9844221, 0, 1, 0, 0.9844221, 0, -0.17582089, 18.90652, 1.1970849, -5.655178)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment" unique_id=31756958]
+environment = SubResource("Environment_c5pkk")
 
 [node name="RaceMusic" type="AudioStreamPlayer" parent="." unique_id=1261564821]
 stream = ExtResource("11_76v2p")
