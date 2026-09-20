@@ -30,6 +30,9 @@ func spawn_horse_cycle():
 	add_child(h)
 	h.position = Vector3.ZERO
 	_spawned_horses.append(h)
+	h.set_physics_process(false)
+	h.set_process(false)
+	h.set_process_input(false)
 	
 	# Spawn the next horse in a bit
 	timer.start(interval)

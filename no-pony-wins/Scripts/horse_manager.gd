@@ -1,15 +1,16 @@
 extends Node3D
 class_name HorseManager
 
-const DEFAULT_HORSE = preload("uid://bxr034afn4d8e")
-const JAMES_BIRD = preload("uid://bhk88s3aucapw")
-const DRAGON_HORSE = preload("uid://kyp588xilrbt")
-const UNICORN = preload("uid://pjbv0asbot3v")
-const TIMM_HORSE = preload("uid://dys2vux5kc3b3")
-const TROPHY_HORSE = preload("uid://dm5mcf7w6myrw")
-const DEVEN_HORSE = preload("uid://dv4kb1nbw3d3a")
 const __HORSE = preload("uid://bob0lrymw50b3")
+const DEFAULT_HORSE = preload("uid://bxr034afn4d8e")
+const DEVEN_HORSE = preload("uid://dv4kb1nbw3d3a")
+const DRAGON_HORSE = preload("uid://kyp588xilrbt")
+const JAMES_BIRD = preload("uid://bhk88s3aucapw")
+const TIMM_HORSE = preload("uid://dys2vux5kc3b3")
 const TOTALLY_A_HORSE = preload("uid://cpeylqdshx21h")
+const TROPHY_HORSE = preload("uid://dm5mcf7w6myrw")
+const UNICORN = preload("uid://pjbv0asbot3v")
+
 
 @export var TOTAL_LAPS: int = 3
 @export var tracks : Node3D
@@ -25,7 +26,7 @@ func _ready() -> void:
 	#instantiate horses
 	for i in tracks.get_children():
 		var h = randi_range(0, horses.size() - 1)
-		var horse_instance = horses[h].instantiate()
+		var horse_instance : Horse = horses[h].instantiate()
 		horses.remove_at(h)
 		i.add_child(horse_instance)
 		horse_instance.set_total_laps(TOTAL_LAPS)
