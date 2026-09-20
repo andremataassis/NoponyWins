@@ -96,3 +96,4 @@ transform = Transform3D(-0.17582089, 0, -0.9844221, 0, 1, 0, 0.9844221, 0, -0.17
 [node name="RaceMusic" type="AudioStreamPlayer" parent="." unique_id=1261564821]
 stream = ExtResource("11_76v2p")
 autoplay = true
+bus = &"Music"

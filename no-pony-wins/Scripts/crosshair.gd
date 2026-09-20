@@ -63,6 +63,8 @@ func attack(power : Player.Powers) -> void:
 					continue
 				horse_tracks.get_child(target).get_child(0).reset_speed()
 		Player.Powers.JETPACK:
+			#play jetpack sound:
+			powerSFX.play("JETPACK")
 			horse_tracks.get_child(horse).get_child(0).jetpack()
 			await get_tree().create_timer(1.0).timeout
 			horse_tracks.get_child(horse).get_child(0).reset_speed()
