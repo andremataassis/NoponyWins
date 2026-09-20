@@ -42,6 +42,21 @@ transform = Transform3D(1, 0, 0, 0, 0.600555, 0.79958344, 0, -0.79958344, 0.6005
 
 [node name="Ui" parent="CanvasLayer" unique_id=306207390 instance=ExtResource("4_x6ack")]
 
+[node name="Label" type="Label" parent="CanvasLayer/Ui" unique_id=1012726521]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -403.0
+offset_top = -23.0
+offset_right = 403.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 21
+text = "Press any button to join the game, hit 'A' on the keyboard or UP D-PAD on controller when everyone's in!"
+
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1463849988]
 anchors_preset = 1
 anchor_left = 1.0

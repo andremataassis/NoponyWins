@@ -20,6 +20,7 @@ func make_crosshair(c : Color):
 	return crosshair_instance
 
 func init_horse_selection_screen(horses: Array[Horse]):
+	get_child(0).queue_free()
 	horse_sel_instance = HORSE_SELECTION.instantiate()
 	add_child(horse_sel_instance)
 	var horse_names = horse_sel_instance.get_child(0).get_child(0).get_child(0)
