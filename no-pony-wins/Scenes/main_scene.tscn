@@ -16,6 +16,9 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m1efj"]
 albedo_texture = ExtResource("4_mai8y")
 
+[sub_resource type="BoxMesh" id="BoxMesh_g4v7s"]
+size = Vector3(0.39440918, 1, 6.453827)
+
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_mai8y"]
 panorama = ExtResource("10_76v2p")
 
@@ -46,6 +49,10 @@ surface_material_override/0 = SubResource("StandardMaterial3D_m1efj")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.038118124, 0.8267852, -2.5503063)
 script = ExtResource("1_52fb6")
 tracks = NodePath("../HorseTracks")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=811846689]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.023778677, -0.48953497, -4.7897625)
+mesh = SubResource("BoxMesh_g4v7s")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1427909374]
 transform = Transform3D(1, 0, 0, 0, 0.600555, 0.79958344, 0, -0.79958344, 0.600555, 0, 3.365532, 0)
