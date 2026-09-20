@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://njao2abs8rxa"]
+
+[ext_resource type="Script" uid="uid://dkyqx21w2oiwu" path="res://Scripts/particle_group.gd" id="1_ct8wp"]
+[ext_resource type="ArrayMesh" uid="uid://cvto6mn7f6guq" path="res://Assets/Models/TimmHorse.obj" id="1_xemp2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mnkty"]
+albedo_color = Color(1.8247963, 0.853542, 0.28755927, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_kqfgo"]
+top_radius = 0.063
+bottom_radius = 0.0
+height = 1.0
+radial_segments = 32
+cap_bottom = false
+
+[sub_resource type="Curve" id="Curve_ptn6o"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.52339184, 0.9768518), 0.0, 0.0, 0, 0, Vector2(1, 0), -6.583344, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ct8wp"]
+albedo_color = Color(0.44105467, 0.20695445, 0.08313749, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kqfgo"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0.3647059, 0.3647059, 0.32941177, 0.3137255)
+
+[sub_resource type="SphereMesh" id="SphereMesh_32gta"]
+radial_segments = 12
+rings = 12
+
+[sub_resource type="Curve" id="Curve_xemp2"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -2.6520822, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afan3"]
+albedo_color = Color(0.9647059, 0.2784314, 0.35686275, 1)
+emission_enabled = true
+emission = Color(1.1805553, 0.45031357, 0.17934331, 1)
+
+[node name="BombExplosion" type="Node3D" unique_id=1212161953]
+script = ExtResource("1_ct8wp")
+lifespan = 1.5
+
+[node name="Spark" type="CPUParticles3D" parent="." unique_id=162522731]
+material_override = SubResource("StandardMaterial3D_mnkty")
+emitting = false
+amount = 36
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.9
+lifetime_randomness = 0.5
+mesh = SubResource("CylinderMesh_kqfgo")
+particle_flag_align_y = true
+spread = 146.8
+initial_velocity_min = 10.0
+initial_velocity_max = 15.0
+damping_min = 2.0
+damping_max = 3.0
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_ptn6o")
+color = Color(1, 0.46666667, 0.29803923, 1)
+
+[node name="Horse" type="CPUParticles3D" parent="." unique_id=1711252678]
+material_override = SubResource("StandardMaterial3D_ct8wp")
+emitting = false
+amount = 20
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.9
+lifetime_randomness = 0.5
+mesh = ExtResource("1_xemp2")
+particle_flag_rotate_y = true
+spread = 146.8
+gravity = Vector3(0, -5, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 15.0
+angular_velocity_min = 25.0
+angular_velocity_max = 720.0
+scale_amount_min = 0.1
+scale_amount_max = 0.2
+scale_amount_curve = SubResource("Curve_ptn6o")
+color = Color(1, 0.46666667, 0.29803923, 1)
+
+[node name="Smoke" type="CPUParticles3D" parent="." unique_id=214676796]
+material_override = SubResource("StandardMaterial3D_kqfgo")
+emitting = false
+amount = 48
+one_shot = true
+explosiveness = 1.0
+lifetime_randomness = 0.25
+mesh = SubResource("SphereMesh_32gta")
+gravity = Vector3(0, 15, 0)
+initial_velocity_min = 6.0
+initial_velocity_max = 10.0
+damping_min = 8.0
+damping_max = 10.0
+scale_amount_min = 0.25
+scale_amount_max = 1.5
+scale_amount_curve = SubResource("Curve_xemp2")
+
+[node name="Fire" type="CPUParticles3D" parent="." unique_id=413111902]
+material_override = SubResource("StandardMaterial3D_afan3")
+emitting = false
+amount = 24
+lifetime = 0.75
+one_shot = true
+explosiveness = 1.0
+lifetime_randomness = 0.25
+mesh = SubResource("SphereMesh_32gta")
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 9.0
+initial_velocity_max = 15.0
+damping_min = 8.0
+damping_max = 10.0
+scale_amount_min = 0.75
+scale_amount_max = 1.5
+scale_amount_curve = SubResource("Curve_xemp2")

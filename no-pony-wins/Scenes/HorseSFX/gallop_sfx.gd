@@ -10,7 +10,7 @@ func play():
 	match randSound:
 		1:
 			gallop1.volume_db = -6 + rng.randf_range(-1,1)
-			gallop1.pitch_scale = 1 + rng.randf_range(-0.9,0.1)
+			gallop1.pitch_scale = 1 + rng.randf_range(-0.1,0.1)
 			gallop1.play()
 		2:
 			gallop1.volume_db = -6 + rng.randf_range(-1,1)
