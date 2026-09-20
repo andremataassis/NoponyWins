@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://8o6rpr0lxuvm" path="res://Scripts/scene_relay.gd" id="1_juhg0"]
 [ext_resource type="FontFile" uid="uid://p6x53vy85onx" path="res://Assets/RyeFont/Rye-Regular.ttf" id="2_m6uer"]
 [ext_resource type="PackedScene" uid="uid://bo4dq887scwyg" path="res://Scenes/UI/horse_cycler.tscn" id="3_a43kq"]
+[ext_resource type="AudioStream" uid="uid://4lihbnwb2ccv" path="res://Assets/Sounds/Music/No Pony Wins Main Menu.wav" id="4_a43kq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kqfgo"]
 font = ExtResource("2_m6uer")
@@ -112,5 +113,10 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2, 
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=296224117]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.5465298, 0, 0)
+
+[node name="MainMenuMusic" type="AudioStreamPlayer" parent="." unique_id=773105438]
+stream = ExtResource("4_a43kq")
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="Button" to="." method="to_game"]
