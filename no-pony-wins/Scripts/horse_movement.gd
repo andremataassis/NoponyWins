@@ -25,7 +25,7 @@ func _ready() -> void:
 		_racer_variance_parameters.append(randf() * 2 * PI) # offset
 	
 	# the one that matters
-	_advantage = randf() * .075
+	_advantage = randf() * .04
 	#print(str(get_parent().name) + " has " + str(_advantage))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -38,7 +38,7 @@ func _physics_process(delta: float) -> void:
 	# check if we progressed a lap
 	if old_progress > progress_ratio:
 		lap += 1 # happens when resets to 0
-		print("lapped! " + str(lap))
+		#print("lapped! " + str(lap))
 	
 	if horseGallopTimer > 0:
 		horseGallopTimer -= delta
