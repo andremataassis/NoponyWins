@@ -2,11 +2,8 @@ extends PathFollow3D
 class_name Horse
 
 var lap : int = 0
-#DO NOT CHANGE TOTAL LAPS HERE, CHANGE TOTAL LAPS IN HORSE_MANAGER.GD
-var TOTAL_LAPS = -1
 @onready var horseSFX = $Horse/HorseSFX
 @onready var rng = RandomNumberGenerator.new()
-@onready var horse_manager: HorseManager = get_tree().current_scene.get_node("HorseManager")
 
 @export var move_speed = 0.1
 @export var horseGallopCooldown : float = 0.4
@@ -34,10 +31,6 @@ func _ready() -> void:
 	_advantage = randf() * .04
 	#print(str(get_parent().name) + " has " + str(_advantage))
 
-#How many laps to complete before winning
-func set_total_laps(laps: int):
-	TOTAL_LAPS = laps
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	if not racing: return
@@ -50,9 +43,6 @@ func _physics_process(delta: float) -> void:
 	# check if we progressed a lap
 	if old_progress > progress_ratio:
 		lap += 1 # happens when resets to 0
-		if lap > TOTAL_LAPS:
-			horse_manager.win_race(self)
-			print("Horse '%s' wins!" % [horse_name])
 		#print("lapped! " + str(lap))
 	
 	if horseGallopTimer > 0:
