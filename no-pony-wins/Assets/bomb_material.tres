@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cjwqtgxqejbc8"]
+
+[ext_resource type="Texture2D" uid="uid://dwdcc2o5kqmd7" path="res://Assets/Sprites/JollyRoger.png" id="1_camn7"]
+
+[resource]
+albedo_texture = ExtResource("1_camn7")
+metallic = 1.0
+roughness = 0.0
