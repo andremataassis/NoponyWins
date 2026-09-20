@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://cdbeiuu2tgxj1" path="res://Assets/Sounds/SFX/sfx_jetpack.wav" id="5_bd5l3"]
 [ext_resource type="Script" uid="uid://dlywxnwaonf50" path="res://Scenes/PowerSFX/portal_sfx.gd" id="6_y2aqu"]
 [ext_resource type="AudioStream" uid="uid://rxe56r0gfotr" path="res://Assets/Sounds/SFX/sfx_portal.wav" id="7_gfg1c"]
+[ext_resource type="AudioStream" uid="uid://d2fonwn6tmos4" path="res://Assets/Sounds/SFX/sfx_portal_2.wav" id="8_75lju"]
 
 [node name="PowerSFX" type="Node2D" unique_id=1032374660]
 script = ExtResource("1_0oa1u")
@@ -30,4 +31,8 @@ script = ExtResource("6_y2aqu")
 
 [node name="SFX_PORTAL_1" type="AudioStreamPlayer" parent="PortalSFX" unique_id=1338980294]
 stream = ExtResource("7_gfg1c")
+bus = &"SFX"
+
+[node name="SFX_PORTAL_2" type="AudioStreamPlayer" parent="PortalSFX" unique_id=1904959258]
+stream = ExtResource("8_75lju")
 bus = &"SFX"
