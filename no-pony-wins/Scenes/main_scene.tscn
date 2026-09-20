@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://chqw76adblo3t" path="res://Scripts/ui_spawner.gd" id="6_6ev3c"]
 [ext_resource type="Texture2D" uid="uid://dh28kaofvo7iv" path="res://Assets/Sprites/toolWheel.PNG" id="7_maf8m"]
 [ext_resource type="PackedScene" uid="uid://cfujj61hrcklc" path="res://Scenes/Envrionment/tree.tscn" id="8_huasi"]
+[ext_resource type="AudioStream" uid="uid://dqb0jvg31wv4w" path="res://Assets/Sounds/Music/No Pony Wins.wav" id="11_76v2p"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m1efj"]
 albedo_texture = ExtResource("4_mai8y")
@@ -91,3 +92,7 @@ transform = Transform3D(0.33462963, 0, -0.9423497, 0, 1, 0, 0.9423497, 0, 0.3346
 
 [node name="tree12" parent="Environment" unique_id=1578218392 instance=ExtResource("8_huasi")]
 transform = Transform3D(-0.17582089, 0, -0.9844221, 0, 1, 0, 0.9844221, 0, -0.17582089, 18.90652, 1.1970849, -5.655178)
+
+[node name="RaceMusic" type="AudioStreamPlayer" parent="." unique_id=1261564821]
+stream = ExtResource("11_76v2p")
+autoplay = true
