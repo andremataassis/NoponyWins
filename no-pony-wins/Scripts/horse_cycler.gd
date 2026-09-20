@@ -9,9 +9,10 @@ const TOTALLY_A_HORSE = preload("uid://cpeylqdshx21h")
 const TROPHY_HORSE = preload("uid://dm5mcf7w6myrw")
 const JAMES_BIRD = preload("uid://bhk88s3aucapw")
 const UNICORN = preload("uid://pjbv0asbot3v")
+const GOBBY_HORSE = preload("uid://uxlf0phdy78l")
 
 var _horses_references := [HASHTAG_HORSE, DEFAULT_HORSE, DEVEN_HORSE, UNICORN,
-	DRAGON_HORSE, TIMM_HORSE, TOTALLY_A_HORSE, TROPHY_HORSE, JAMES_BIRD]
+	DRAGON_HORSE, TIMM_HORSE, TOTALLY_A_HORSE, TROPHY_HORSE, JAMES_BIRD, GOBBY_HORSE]
 
 # used for spawning time
 @onready var timer: Timer = $Timer
