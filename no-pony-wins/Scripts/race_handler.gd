@@ -76,9 +76,14 @@ func _pick_horse(event: InputEvent):
 
 func _start_race():
 	race_state = RaceState.READY
+	var countdown : float = 1.4
 	raceMusic.play(10.285)
 	while (raceMusic.get_playback_position() < 12):
+		$CanvasLayer/Ui.countdownTimer(countdown)
 		await (get_tree().create_timer(0.1).timeout)
+		countdown -= 0.1
+		if countdown < 0:
+			countdown = 0
 	ui_spawner.delete_horse_selection_ui()
 	horse_manager.unpause_horses()
 	race_state = RaceState.RACING

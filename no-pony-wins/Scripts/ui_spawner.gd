@@ -53,6 +53,10 @@ func place_charge_meter(player_id : int, color: Color):
 	charge_instance.get_child(0).position = Vector2(((canvas_size.x - canvas_size.x / 15) / 4) * (player_id - 1) + canvas_size.x / 15, canvas_size.y - canvas_size.y / 15)
 	return charge_instance
 
+func countdownTimer(timeLeft : float):
+	var player_text = horse_sel_instance.get_child(0).get_child(0).get_child(3)
+	player_text.text = "Race Starts In " + str(timeLeft) + "!"
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
