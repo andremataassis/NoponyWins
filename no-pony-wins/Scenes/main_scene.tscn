@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dblstm862mruk" path="res://Scripts/horse_spawner.gd" id="1_52fb6"]
 [ext_resource type="Script" uid="uid://fbp8bsrv5p8r" path="res://Scripts/camera_movement.gd" id="1_jv6wh"]
-[ext_resource type="Script" uid="uid://di21cswbi35y7" path="res://Scripts/supreme_race_grand_master_baiter_wizard.gd" id="1_maf8m"]
+[ext_resource type="Script" uid="uid://di21cswbi35y7" path="res://Scripts/race_handler.gd" id="1_maf8m"]
 [ext_resource type="PackedScene" uid="uid://ccei4waql30d3" path="res://Scenes/horse_tracks.tscn" id="2_6l7je"]
 [ext_resource type="ArrayMesh" uid="uid://8ba0ry3jjnb3" path="res://Assets/Models/Track.obj" id="3_huasi"]
 [ext_resource type="Texture2D" uid="uid://bdaaetyh55r5j" path="res://Assets/Models/Track_Untitled.png" id="4_mai8y"]
