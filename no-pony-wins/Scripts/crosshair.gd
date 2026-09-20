@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var crosshair: Node2D = $"."
 @onready var horse_tracks: Node3D = $"../../../HorseTracks"
+@onready var powerSFX = $PowerSFX
 var power: String
 var start_y: float
 
@@ -35,6 +36,9 @@ func _attack(horse: int) -> void:
 
 	match (power):
 		"bomb":
+			# play bomb sound
+			powerSFX.play("BOMB")
+			
 			# get horses in blast
 			var targets = [-1, horse, -1]
 			if horse - 1 >= 0:
