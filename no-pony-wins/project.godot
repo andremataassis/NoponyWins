@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="NoPonyWins"
-run/main_scene="uid://p6y218jucqe3"
+run/main_scene="uid://dw60hy8tak3o7"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

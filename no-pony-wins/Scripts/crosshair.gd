@@ -4,7 +4,7 @@ class_name Crosshair
 @onready var crosshair: Node2D = $"."
 @onready var horse_tracks: Node3D = $"../../../HorseTracks"
 @onready var powerSFX = $PowerSFX
-@onready var race_handler : RaceHandler = get_tree().current_scene
+@onready var race_handler : RaceHandler = get_tree().current_scene.get_child(0)
 var start_y: float
 var enabled_time: float
 

@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://bh25gyoc63jxe"]
+
+[ext_resource type="Script" uid="uid://8o6rpr0lxuvm" path="res://Scripts/scene_relay.gd" id="1_juhg0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kqfgo"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_32gta"]
+font_size = 64
+
+[node name="StartMenu" type="Control" unique_id=88530644]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_juhg0")
+
+[node name="Button" type="Button" parent="." unique_id=1588417529]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = 12.0
+offset_right = 150.0
+offset_bottom = 99.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Button" unique_id=52300430]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -123.0
+offset_top = -22.5
+offset_right = 123.0
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Off to the Races"
+label_settings = SubResource("LabelSettings_kqfgo")
+
+[node name="Label" type="Label" parent="." unique_id=779544382]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -205.0
+offset_top = -99.0
+offset_right = 205.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "NoPony Wins"
+label_settings = SubResource("LabelSettings_32gta")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="to_game"]
