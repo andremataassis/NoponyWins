@@ -5,6 +5,8 @@
 [ext_resource type="Script" uid="uid://c685063fgr138" path="res://Scenes/PowerSFX/bomb_sfx.gd" id="2_8xgi4"]
 [ext_resource type="Script" uid="uid://bkxdpmn7a64sd" path="res://Scenes/PowerSFX/jetpack_sfx.gd" id="4_ydom8"]
 [ext_resource type="AudioStream" uid="uid://cdbeiuu2tgxj1" path="res://Assets/Sounds/SFX/sfx_jetpack.wav" id="5_bd5l3"]
+[ext_resource type="Script" uid="uid://dlywxnwaonf50" path="res://Scenes/PowerSFX/portal_sfx.gd" id="6_y2aqu"]
+[ext_resource type="AudioStream" uid="uid://rxe56r0gfotr" path="res://Assets/Sounds/SFX/sfx_portal.wav" id="7_gfg1c"]
 
 [node name="PowerSFX" type="Node2D" unique_id=1032374660]
 script = ExtResource("1_0oa1u")
@@ -21,4 +23,11 @@ script = ExtResource("4_ydom8")
 
 [node name="SFX_JETPACK_1" type="AudioStreamPlayer" parent="JetpackSFX" unique_id=771398435]
 stream = ExtResource("5_bd5l3")
+bus = &"SFX"
+
+[node name="PortalSFX" type="Node2D" parent="." unique_id=2106645732]
+script = ExtResource("6_y2aqu")
+
+[node name="SFX_PORTAL_1" type="AudioStreamPlayer" parent="PortalSFX" unique_id=1338980294]
+stream = ExtResource("7_gfg1c")
 bus = &"SFX"

@@ -76,6 +76,8 @@ func attack(power : Player.Powers) -> void:
 			await get_tree().create_timer(1.0).timeout
 			horse_tracks.get_child(horse).get_child(0).reset_speed()
 		Player.Powers.PORTAL:
+			#play portal sound
+			powerSFX.play("PORTAL")
 			var rng = RandomNumberGenerator.new()
 			var target2 = rng.randi_range(0, 7)
 			horse_tracks.get_child(target2).get_child(0).reparent(horse_tracks.get_child(horse), false)
