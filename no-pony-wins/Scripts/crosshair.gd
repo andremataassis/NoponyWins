@@ -87,6 +87,8 @@ func attack(power : Player.Powers) -> void:
 			horse_tracks.get_child(target2).get_child(0).reparent(horse_tracks.get_child(horse), false)
 			horse_tracks.get_child(horse).get_child(0).reparent(horse_tracks.get_child(target2), false)
 		Player.Powers.AIRHORN:
+			#play neigh sound
+			powerSFX.play("NEIGH")
 			print("broadcasted")
 			race_handler.airhorn_used()
 			pass
