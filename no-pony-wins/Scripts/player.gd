@@ -15,7 +15,7 @@ const MAX_CHARGE: float = 100
 
 #Colors for each player, depending on player_id
 const COLORS = [Color(1.0, 0.0, 0.0, 1.0), Color(0.0, 1.0, 0.0, 1.0), Color(0.0, 0.0, 1.0, 1.0), Color(0.967, 0.819, 0.0, 1.0)]
-enum Powers {NONE, BOMB, JETPACK, PORTAL, AIRHORN}
+enum Powers {NONE, BOMB, JETPACK, PORTAL, NEIGH}
 
 func _init(pid: int, did: int, h: Node, char_meter: Node, crosshair: Node):
 	player_id = pid
@@ -74,16 +74,16 @@ func handle_input(event: InputEvent):
 			crosshair_ref.enable_crosshair()
 			selected_power = Powers.PORTAL
 	
-	if event.is_action_pressed("airhorn") && charge == 100.0:
-		if selected_power == Powers.AIRHORN:
+	if event.is_action_pressed("neigh") && charge == 100.0:
+		if selected_power == Powers.NEIGH:
 			print("FWOOOOOOOOO- Player %d" % [player_id])
 			selected_power = Powers.NONE
 			charge = 0.0
-			crosshair_ref.attack(Powers.AIRHORN)
+			crosshair_ref.attack(Powers.NEIGH)
 		else:
-			print("Selected AIRHORN - Player %d" % [player_id])
+			print("Selected NEIGH - Player %d" % [player_id])
 			crosshair_ref.disable_crosshair()
-			selected_power = Powers.AIRHORN
+			selected_power = Powers.NEIGH
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

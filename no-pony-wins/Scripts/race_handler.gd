@@ -121,7 +121,7 @@ func _add_player(event: InputEvent):
 	player_array.append(player)
 	print("Player %d added with device %d and crosshair %d" % [player.player_id, player.device_id, crosshair.get_instance_id()])
 
-func airhorn_used():
+func neigh_used():
 	for player in player_array:
 		player.use_current_power()
 

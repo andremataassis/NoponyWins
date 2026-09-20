@@ -82,7 +82,9 @@ func attack(power : Player.Powers) -> void:
 			var target2 = rng.randi_range(0, 7)
 			horse_tracks.get_child(target2).get_child(0).reparent(horse_tracks.get_child(horse), false)
 			horse_tracks.get_child(horse).get_child(0).reparent(horse_tracks.get_child(target2), false)
-		Player.Powers.AIRHORN:
+		Player.Powers.NEIGH:
+			#play neigh sound
+			powerSFX.play("NEIGH")
 			print("broadcasted")
-			race_handler.airhorn_used()
+			race_handler.neigh_used()
 			pass
