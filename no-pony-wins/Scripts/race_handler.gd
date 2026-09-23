@@ -5,6 +5,7 @@ enum RaceState {ADDING_PLAYERS, PICKING_HORSES, RACING, GAME_OVER, READY}
 @export var ui_spawner: UISpawner
 @export var horse_manager: HorseManager
 @onready var raceMusic : AudioStreamPlayer = $RaceMusic
+@onready var readyMusic : AudioStreamPlayer = $ReadyMusic
 
 var player_array: Array[Player] = []
 const MAX_PLAYERS = 4
@@ -78,6 +79,7 @@ func _start_race():
 	race_state = RaceState.READY
 	ui_spawner.show_laps()
 	var countdown : float = 1.4
+	readyMusic.stop()
 	raceMusic.play(10.285)
 	while (raceMusic.get_playback_position() < 12):
 		$CanvasLayer/Ui.countdownTimer(countdown)
@@ -141,6 +143,3 @@ func _process(delta: float) -> void:
 	if race_state == RaceState.RACING:
 		for player in player_array:
 			player.refill_meter(delta)
-	elif race_state != RaceState.READY:
-		if raceMusic.get_playback_position() >= 6.857:
-			raceMusic.play(0)

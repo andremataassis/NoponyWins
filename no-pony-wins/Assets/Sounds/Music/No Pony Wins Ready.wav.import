@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dqb0jvg31wv4w"
+path="res://.godot/imported/No Pony Wins Ready.wav-61ce333fd93c2c1b08b7d0520ccfd8c9.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Music/No Pony Wins Ready.wav"
+dest_files=["res://.godot/imported/No Pony Wins Ready.wav-61ce333fd93c2c1b08b7d0520ccfd8c9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=302393
+compress/mode=2

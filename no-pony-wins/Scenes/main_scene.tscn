@@ -10,7 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://dh28kaofvo7iv" path="res://Assets/Sprites/ui_elements/toolWheel.PNG" id="7_maf8m"]
 [ext_resource type="PackedScene" uid="uid://cfujj61hrcklc" path="res://Scenes/Envrionment/tree.tscn" id="8_huasi"]
 [ext_resource type="Texture2D" uid="uid://bjl1a72s1tfyn" path="res://Assets/Sprites/Sky.png" id="10_76v2p"]
-[ext_resource type="AudioStream" uid="uid://dqb0jvg31wv4w" path="res://Assets/Sounds/Music/No Pony Wins.wav" id="11_76v2p"]
+[ext_resource type="AudioStream" uid="uid://dqb0jvg31wv4w" path="res://Assets/Sounds/Music/No Pony Wins Ready.wav" id="11_76v2p"]
+[ext_resource type="AudioStream" uid="uid://dxbkg1f8nwqx8" path="res://Assets/Sounds/Music/No Pony Wins Race.wav" id="11_drdnd"]
 [ext_resource type="Script" uid="uid://dqti5adnm20je" path="res://Scenes/dude_spawner.gd" id="12_drdnd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m1efj"]
@@ -143,6 +144,9 @@ transform = Transform3D(-0.17582089, 0, -0.9844221, 0, 1, 0, 0.9844221, 0, -0.17
 environment = SubResource("Environment_c5pkk")
 
 [node name="RaceMusic" type="AudioStreamPlayer" parent="." unique_id=1261564821]
+stream = ExtResource("11_drdnd")
+
+[node name="ReadyMusic" type="AudioStreamPlayer" parent="." unique_id=148162343]
 stream = ExtResource("11_76v2p")
 autoplay = true
 
